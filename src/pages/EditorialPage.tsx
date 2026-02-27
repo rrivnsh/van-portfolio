@@ -30,7 +30,7 @@ function useJakartaTime() {
           minute: "2-digit",
           hour12: false,
           timeZone: "Asia/Jakarta",
-        })
+        }),
       );
     };
     updateTime();
@@ -185,7 +185,7 @@ const EditorialPage = () => {
             {/* Social Links */}
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com/pwshRivan"
+                href="https://github.com/rrivnsh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-(--color-subtle) hover:text-(--color-fg) transition-colors"
