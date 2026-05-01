@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: https://van-portfolio-smoky.vercel.app
+Sitemap: https://rivan.me/sitemap.xml

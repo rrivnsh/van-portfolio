@@ -10,3 +10,4 @@ export * from "./skillsData";
 
 // Navigation configuration
 export * from "./overlays";
+export * from "./socialData";

@@ -1,6 +1,6 @@
 // Skills Data
 // Categorized skills and expertise areas
-export interface SkillCategory {
+interface SkillCategory {
   id: number;
   category: string;
   key: string; // for i18n

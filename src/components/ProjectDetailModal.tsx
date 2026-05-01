@@ -31,13 +31,13 @@ const ProjectDetailModal = ({
     <>
       {isOpen && (
         <>
-          {/* Backdrop */}
+          {/* backdrop overlay */}
           <div
             className="fixed inset-0 bg-black/60 backdrop-blur-md z-40 transition-opacity"
             onClick={onClose}
           />
 
-          {/* Modal */}
+          {/* modal container */}
           <div
             className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 lg:p-12 pointer-events-none"
           >
@@ -45,7 +45,7 @@ const ProjectDetailModal = ({
               className="relative bg-(--color-bg) shadow-2xl shadow-black/50 rounded-3xl max-w-3xl w-full max-h-[90vh] overflow-y-auto pointer-events-auto flex flex-col"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Close Button */}
+              {/* close modal button */}
               <button
                 onClick={onClose}
                 className="absolute top-6 right-6 p-2.5 rounded-full bg-(--color-fg)/5 hover:bg-(--color-fg)/10 transition-colors duration-200 z-10 cursor-pointer backdrop-blur-sm"
@@ -53,10 +53,10 @@ const ProjectDetailModal = ({
                 <X className="w-5 h-5 text-(--color-fg)" />
               </button>
 
-              {/* Content */}
+              {/* modal content */}
               <div className="flex-1 flex flex-col p-6 md:p-10 space-y-8 md:space-y-10">
                 
-                {/* Header */}
+                {/* modal header */}
                 <div className="space-y-4 pr-12">
                   <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-(--color-fg) leading-tight">
                     {project.title}
@@ -70,7 +70,7 @@ const ProjectDetailModal = ({
                   </div>
                 </div>
 
-                {/* Project Image */}
+                {/* project showcase image */}
                 <div className="rounded-2xl overflow-hidden bg-(--color-fg)/5 aspect-video w-full ring-1 ring-(--color-border)/20 shadow-inner">
                   <img
                     src={project.image}
@@ -80,7 +80,7 @@ const ProjectDetailModal = ({
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                  {/* Description (Takes 2 columns on desktop) */}
+                  {/* project description */}
                   <div className="md:col-span-2 space-y-4">
                     <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-(--color-subtle) border-b border-(--color-border)/20 pb-2">About</h3>
                     <p className="text-body md:text-lg text-(--color-muted) leading-relaxed">
@@ -88,7 +88,7 @@ const ProjectDetailModal = ({
                     </p>
                   </div>
 
-                  {/* Tech Stack (Takes 1 column on desktop) */}
+                  {/* technology stack */}
                   <div className="space-y-4">
                     <h3 className="text-xs font-bold tracking-[0.2em] uppercase text-(--color-subtle) border-b border-(--color-border)/20 pb-2">Tech Stack</h3>
                     <div className="flex flex-wrap gap-2">
@@ -104,7 +104,7 @@ const ProjectDetailModal = ({
                   </div>
                 </div>
 
-                {/* Links */}
+                {/* external links */}
                 <div className="flex flex-col sm:flex-row gap-4 pt-6 mt-auto">
                   {project.link && (
                     <a

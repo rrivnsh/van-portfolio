@@ -1,5 +1,4 @@
-import type { TabType } from "@/config";
-import { contactData } from "@/config";
+import { socialLinks, type TabType } from "@/config";
 import { useJakartaTime, useLanguage, useTheme } from "@/hooks";
 import {
   EducationSection,
@@ -8,36 +7,16 @@ import {
   ProjectsSection,
   SkillsSection,
 } from "@/sections";
-import { Github, Linkedin, PhoneCall } from "lucide-react";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-// Section title lookup — single source of truth
+// section title lookup
 const sectionTitleKeys: Record<Exclude<TabType, "overview">, string> = {
   projects: "overview.nav_projects",
   experience: "overview.nav_journey",
   skills: "overview.nav_skills",
   education: "overview.nav_foundations",
 };
-
-// Social links derived from contactData
-const socialLinks = [
-  {
-    href: contactData.github,
-    label: "GitHub",
-    icon: <Github className="w-4 h-4" strokeWidth={1.5} />,
-  },
-  {
-    href: contactData.linkedin,
-    label: "LinkedIn",
-    icon: <Linkedin className="w-4 h-4" strokeWidth={1.5} />,
-  },
-  {
-    href: `https://wa.me/${contactData.phone.replace(/\D/g, "")}`,
-    label: "WhatsApp",
-    icon: <PhoneCall className="w-4 h-4" strokeWidth={1.5} />,
-  },
-];
 
 const EditorialPage = () => {
   const { t, i18n } = useTranslation();
@@ -47,8 +26,8 @@ const EditorialPage = () => {
   const time = useJakartaTime();
 
   return (
-    <div className="fixed inset-0 bg-(--color-bg) text-(--color-fg) flex flex-col justify-between p-6 md:p-12 overflow-y-auto">
-      {/* Top Bar */}
+    <div className="fixed inset-0 bg-(--color-bg) text-(--color-fg) flex flex-col justify-between p-6 md:p-12 overflow-hidden">
+      {/* top bar */}
       <header className="flex items-center justify-between shrink-0 z-40 relative">
         <button
           onClick={() => setActiveTab("overview")}
@@ -72,13 +51,13 @@ const EditorialPage = () => {
         </div>
       </header>
 
-      {/* Middle Content */}
+      {/* middle content */}
       <main className="flex-1 flex flex-col my-8 md:my-12 relative min-h-0">
         {activeTab === "overview" && (
           <OverviewSection onNavigate={setActiveTab} />
         )}
         {activeTab !== "overview" && (
-          <div className="flex-1 flex flex-col w-full max-w-7xl mx-auto h-full overflow-y-auto pr-2 md:pr-4">
+          <div className="flex-1 flex flex-col w-full max-w-7xl mx-auto h-full overflow-hidden pr-2 md:pr-4">
             <button
               onClick={() => setActiveTab("overview")}
               className="group flex items-center gap-3 text-caption text-(--color-subtle) hover:text-(--color-fg) transition-colors w-fit mb-8 md:mb-12 cursor-pointer"
@@ -97,9 +76,9 @@ const EditorialPage = () => {
         )}
       </main>
 
-      {/* Bottom Bar */}
+      {/* bottom bar */}
       <footer className="flex flex-col md:flex-row items-center justify-between gap-6 shrink-0">
-        {/* Left: Socials */}
+        {/* social links */}
         <div className="flex items-center gap-4 w-full md:w-auto justify-center md:justify-start">
           {socialLinks.map((link) => (
             <a
@@ -115,14 +94,14 @@ const EditorialPage = () => {
           ))}
         </div>
 
-        {/* Center: Status */}
+        {/* availability status */}
         <div className="hidden md:block">
           <p className="text-caption text-(--color-subtle)">
             {t("editorial.available", "TERBUKA UNTUK KERJA")}
           </p>
         </div>
 
-        {/* Right: Location & Time */}
+        {/* location and time */}
         <div className="text-center md:text-right w-full md:w-auto">
           <p className="text-caption text-(--color-subtle) mb-1">
             Bandung, Indonesia

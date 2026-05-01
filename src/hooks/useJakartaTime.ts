@@ -1,5 +1,4 @@
-// useJakartaTime Hook
-// Returns the current time in WIB (Asia/Jakarta) timezone, updated every second
+// provides current time in jakarta timezone
 import { useEffect, useState } from "react";
 
 export function useJakartaTime(): string {
