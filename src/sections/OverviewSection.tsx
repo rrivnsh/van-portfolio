@@ -33,9 +33,7 @@ const OverviewSection = ({
         </p>
         <div className="flex flex-col gap-4">
           <a
-            href={`https://wa.me/${contactData.phone.replace(/\D/g, "")}`}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:${contactData.email}`}
             className="group flex items-center gap-3 text-caption text-(--color-fg) hover:text-(--color-muted) transition-colors w-fit"
           >
             <span className="w-8 h-px bg-(--color-fg) group-hover:w-12 transition-all duration-300" />
