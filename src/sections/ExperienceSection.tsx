@@ -1,21 +1,25 @@
-import { Pagination, SectionLayout } from "@/components";
+import { SectionLayout } from "@/components";
 import { experienceData } from "@/config";
 import { useTranslation } from "react-i18next";
-import { usePagination } from "@/hooks";
+import { useScrollReveal } from "@/hooks";
 
 export const ExperienceSection = () => {
   const { t } = useTranslation();
-
-  const { currentPage, totalPages, currentData, handleNext, handlePrev } =
-    usePagination(experienceData, 3);
+  const { elementRef, isVisible } = useScrollReveal(0.05);
 
   return (
-    <>
-      <SectionLayout introText={t("editorial.journey_intro")}>
-        {currentData.map((exp) => (
+    <SectionLayout introText={t("editorial.journey_intro")}>
+      <div 
+        ref={elementRef}
+        className="flex flex-col gap-0 py-8 overflow-hidden"
+      >
+        {experienceData.map((exp, idx) => (
           <article
             key={exp.id}
-            className="flex flex-col lg:flex-row lg:items-start justify-between gap-4 lg:gap-8 border-b border-(--color-border)/20 py-8 group"
+            className={`group flex flex-col lg:flex-row lg:items-start justify-between gap-4 lg:gap-8 border-b border-(--color-border)/20 py-10 transition-all duration-1000 ease-out ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+            }`}
+            style={{ transitionDelay: `${idx * 150}ms` }}
           >
             {/* role and company */}
             <div className="flex-1">
@@ -41,14 +45,7 @@ export const ExperienceSection = () => {
             </div>
           </article>
         ))}
-      </SectionLayout>
-
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onNext={handleNext}
-        onPrev={handlePrev}
-      />
-    </>
+      </div>
+    </SectionLayout>
   );
 };

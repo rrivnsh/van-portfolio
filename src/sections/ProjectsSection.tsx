@@ -1,93 +1,80 @@
 import { ProjectDetailModal } from "@/components/ProjectDetailModal";
-import { Pagination, SectionLayout } from "@/components";
+import { SectionLayout } from "@/components";
 import { projectsData } from "@/config";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import { usePagination } from "@/hooks";
+import { useScrollReveal } from "@/hooks";
 
 export const ProjectsSection = () => {
   const { t } = useTranslation();
   const [selectedProject, setSelectedProject] = useState<
     (typeof projectsData)[0] | null
   >(null);
-  
-  const ITEMS_PER_PAGE = 1;
-  const { currentPage, totalPages, currentData, handleNext, handlePrev } =
-    usePagination(projectsData, ITEMS_PER_PAGE);
+
+  const { elementRef, isVisible } = useScrollReveal(0.05);
 
   return (
-    <>
-      <SectionLayout
-        introText={t("editorial.projects_intro")}
-        contentClassName="group/list"
+    <SectionLayout introText={t("editorial.projects_intro")}>
+      <div 
+        ref={elementRef}
+        className="flex flex-col py-8 overflow-hidden"
       >
-        {currentData.map((project, idx) => (
-          <button
-            key={project.id}
-            onClick={() => setSelectedProject(project)}
-            className="group/row flex flex-col lg:flex-row lg:items-center justify-between gap-6 lg:gap-12 border-b border-(--color-border)/20 py-8 md:py-12 text-left bg-transparent cursor-pointer transition-all duration-500 opacity-100 group-hover/list:opacity-30 hover:opacity-100!"
-          >
-            {/* project title and index */}
-            <div className="flex items-start lg:items-center gap-6 md:gap-12 w-full lg:w-auto">
-              <span className="text-caption text-(--color-subtle) font-mono w-6 md:w-8 pt-2 lg:pt-0">
-                {String((currentPage - 1) * ITEMS_PER_PAGE + idx + 1).padStart(2, "0")}
-              </span>
-              <div>
-                <h3 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-(--color-fg) group-hover/row:-translate-y-2 transition-transform duration-500 uppercase leading-none mb-2 lg:mb-0">
+        {/* Table Header - Desktop Only */}
+        <div className={`hidden md:grid grid-cols-12 gap-8 pb-8 text-[0.65rem] font-bold tracking-[0.3em] uppercase text-(--color-subtle) transition-all duration-1000 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}>
+          <div className="col-span-7">PROJECT / NO.</div>
+          <div className="col-span-2">CATEGORY</div>
+          <div className="col-span-3 text-right">METADATA</div>
+        </div>
+
+        {/* Project Rows */}
+        <div className="flex flex-col">
+          {projectsData.map((project, idx) => (
+            <button
+              key={project.id}
+              onClick={() => setSelectedProject(project)}
+              className={`group flex flex-col lg:flex-row lg:items-baseline justify-between gap-4 lg:gap-8 border-b border-(--color-border)/20 py-12 transition-all duration-1000 ease-out ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
+              }`}
+              style={{ transitionDelay: `${(idx + 1) * 150}ms` }}
+            >
+              {/* Title & Index */}
+              <div className="flex-1 lg:flex-none lg:w-7/12 flex items-start gap-8 group-hover:translate-x-2 md:group-hover:translate-x-4 transition-transform duration-500">
+                <span className="text-[0.65rem] font-mono text-(--color-subtle) opacity-60 mt-4">
+                  {String(idx + 1).padStart(2, "0")}
+                </span>
+                <h3 className="text-2xl md:text-4xl font-extrabold tracking-tight uppercase text-(--color-fg)">
                   {project.title}
                 </h3>
-                {/* mobile project description */}
-                <p className="lg:hidden text-body text-(--color-muted) max-w-md mt-4">
-                  {t(project.desc)}
-                </p>
               </div>
-            </div>
 
-            {/* project metadata and stack */}
-            <div className="flex flex-col lg:items-end gap-4 pl-12 md:pl-20 lg:pl-0 w-full lg:w-1/3">
-              <p className="hidden lg:block text-body text-(--color-muted) text-right line-clamp-2">
-                {t(project.desc)}
-              </p>
+              {/* Metadata & Button */}
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between lg:text-right w-full lg:w-5/12 mt-4 lg:mt-0 gap-6">
+                <div className="flex flex-col">
+                  <p className="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-(--color-subtle)">
+                    {project.category}
+                  </p>
+                  <p className="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-(--color-fg) mt-1">
+                    {project.role}
+                  </p>
+                </div>
 
-              <div className="flex items-center lg:justify-end gap-3 flex-wrap">
-                <span className="text-[0.55rem] md:text-[0.65rem] font-bold tracking-[0.2em] uppercase text-(--color-subtle)">
-                  {project.role}
-                </span>
-                <span className="w-1 h-1 rounded-full bg-(--color-border)" />
-                <div className="flex gap-2 flex-wrap">
-                  {project.tech.slice(0, 3).map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-[0.55rem] md:text-[0.65rem] font-bold tracking-widest uppercase text-(--color-fg) border border-(--color-border)/40 px-2.5 py-1 rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                  {project.tech.length > 3 && (
-                    <span className="text-[0.55rem] md:text-[0.65rem] font-bold tracking-widest uppercase text-(--color-subtle) px-1 py-1">
-                      +{project.tech.length - 3}
-                    </span>
-                  )}
+                <div className="flex items-center gap-3 text-[0.65rem] font-black tracking-[0.3em] uppercase text-(--color-fg) opacity-40 group-hover:opacity-100 transition-all duration-500">
+                  <span>View Details</span>
+                  <span className="w-6 h-px bg-(--color-fg) group-hover:w-10 transition-all duration-500" />
                 </div>
               </div>
-            </div>
-          </button>
-        ))}
-      </SectionLayout>
+            </button>
+          ))}
+        </div>
+      </div>
 
-      <Pagination
-        currentPage={currentPage}
-        totalPages={totalPages}
-        onNext={handleNext}
-        onPrev={handlePrev}
-      />
-
-      {/* project details modal */}
       <ProjectDetailModal
         isOpen={selectedProject !== null}
         onClose={() => setSelectedProject(null)}
         project={selectedProject}
       />
-    </>
+    </SectionLayout>
   );
 };

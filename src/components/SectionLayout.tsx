@@ -12,14 +12,14 @@ export const SectionLayout: React.FC<SectionLayoutProps> = ({
   contentClassName = "",
 }) => {
   return (
-    <div className="w-full flex flex-col h-full">
+    <div className="w-full flex flex-col pt-12 pb-27.5">
       {/* Intro */}
-      <p className="text-body text-(--color-muted) mb-8 md:mb-12">
+      <p className="text-xl md:text-3xl font-light text-(--color-muted) mb-24 max-w-4xl leading-relaxed">
         {introText}
       </p>
 
       {/* Content Area */}
-      <div className={`flex flex-col border-t border-(--color-border)/20 mt-8 min-h-[400px] ${contentClassName}`}>
+      <div className={`flex flex-col ${contentClassName}`}>
         {children}
       </div>
     </div>

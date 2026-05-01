@@ -31,8 +31,7 @@
 html,
 body,
 #root {
-  height: 100%;
-  overflow: hidden;
+  min-height: 100%;
 }
 
 body {
@@ -42,17 +41,12 @@ body {
   line-height: 1.5;
   background-color: var(--color-bg);
   color: var(--color-fg);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-::selection {
-  background-color: var(--color-fg);
-  color: var(--color-bg);
-}
-
-/* Typography system */
 
 /* Display — Hero headlines */
 .text-display {
@@ -63,12 +57,12 @@ body {
   text-transform: uppercase;
 }
 
-/* Headline — Section titles */
+/* Headline — Section titles (Golden Ratio scaled) */
 .text-headline {
-  font-size: clamp(2.5rem, 8vw, 5rem);
-  line-height: 0.9;
-  letter-spacing: -0.03em;
-  font-weight: 800;
+  font-size: clamp(3.5rem, 10vw, 7rem); /* ~112px on large screens */
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
@@ -82,8 +76,8 @@ body {
 
 /* Body — Paragraph text */
 .text-body {
-  font-size: clamp(0.875rem, 1.2vw, 1.125rem);
-  line-height: 1.6;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  line-height: 1.618; /* Golden Ratio */
   font-weight: 400;
   letter-spacing: -0.01em;
 }
@@ -102,40 +96,4 @@ body {
   letter-spacing: 0.25em;
   text-transform: uppercase;
   font-weight: 600;
-}
-
-/* Accessibility: reduce motion */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Sleek Minimalist Scrollbar */
-::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-border);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-subtle);
-}
-
-/* For Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-border) transparent;
 }
