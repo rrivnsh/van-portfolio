@@ -1,4 +1,20 @@
 {
+  "overview": {
+    "welcome": "Welcome",
+    "intro": "I'm Rivan, a full-stack developer from Bandung building digital solutions. Explore my work, experience, and skills below.",
+    "projects_desc": "Work I've built and shipped",
+    "journey_desc": "Experience and roles",
+    "skills_desc": "Technologies and expertise",
+    "foundations_desc": "Education and learning",
+    "nav_projects": "Projects",
+    "nav_journey": "Journey",
+    "nav_skills": "Skills",
+    "nav_foundations": "Foundations",
+    "stat_projects": "Projects",
+    "stat_experiences": "Experiences",
+    "stat_skills": "Skill Areas"
+  },
+
   "editorial": {
     "available": "Open to work",
     "statement": "I build the web with curiosity and intention.",
@@ -6,24 +22,33 @@
     "return": "Back",
     "projects_intro": "Each project shaped how I approach problems.",
     "journey_intro": "Roles that taught me how to build and collaborate.",
-    "foundations_intro": "Where I built my understanding."
+    "foundations_intro": "Where I built my understanding.",
+    "skills_intro": "A diverse toolkit of technical and soft skills developed through practice and continuous learning."
   },
 
   "data": {
-    "ewastepas_desc": "A web application for electronic waste management. Focused on responsive design and user experience.",
-    "babygrowth_desc": "Cloud-based health tracking application. National-scale project recognized among top 50 capstone projects.",
+    "apotek_desc": "Digital system for pharmacy operations. Served as project lead coordinating frontend-backend integration. Developed responsive UI for inventory, sales, and customer management with structured system workflows.",
+    "apotek_full_desc": "Digital pharmacy management system serving as project lead coordinating full frontend-backend integration. Developed responsive web interface for inventory management, sales tracking, and customer administration. Implemented structured system workflows with real-time data synchronization for operational efficiency.",
+    "ewastepas_desc": "Web application for electronic waste collection and management. Built progressive web app with React and Tailwind CSS for responsive design. Manages e-waste pickup requests with dynamic data display and offline capability.",
+    "ewastepas_full_desc": "Progressive web application for electronic waste collection and management platform. Built responsive interface using React and Tailwind CSS for seamless cross-device experience. Features dynamic e-waste pickup request system with real-time updates and offline capability for enhanced accessibility.",
+    "babygrowth_desc": "Cloud-based child health tracking platform. Developed REST API with JWT authentication and deployed to Google Cloud Platform. Named among Top 50 capstone projects from 200+ teams nationwide.",
+    "babygrowth_full_desc": "Cloud-based child health tracking platform connecting healthcare providers and parents. Developed robust REST APIs with JWT authentication ensuring secure data exchange. Deployed to Google Cloud Platform with scalable infrastructure. Recognized as Top 50 capstone project among 200+ teams nationwide in Bangkit Academy cohort.",
 
     "exp_gdc_role": "Curriculum Developer",
     "exp_gdc_company": "Google Developer on Campus",
-    "exp_gdc_desc": "Developed cloud computing learning materials. Mentored in technical workshops and project-based programs.",
+    "exp_gdc_desc": "Developed practical cloud computing learning materials on Virtual Machine and application deployment. Led technical workshops mentoring participants through hands-on Google Cloud Platform exercises. Collaborated with team to design curriculum aligned with industry needs.",
 
     "exp_bangkit_role": "Software Development Trainee",
     "exp_bangkit_company": "Bangkit Academy 2024",
-    "exp_bangkit_desc": "Built cloud-based applications in cross-functional teams. Project recognized as Top 50 among 200+ teams nationwide.",
+    "exp_bangkit_desc": "Built REST APIs using Node.js for seamless backend-frontend data integration. Deployed applications to Google Cloud Platform ensuring online accessibility. Worked in cross-functional Agile teams on BabyGrowth capstone project recognized as Top 50 among 200+ teams.",
+
+    "exp_smk_role": "Staff Administrasi & IT Support",
+    "exp_smk_company": "SMK Angkasa Lanud Husein Sastranegara",
+    "exp_smk_desc": "Managed administrative documentation and data validation using Microsoft Excel. Performed hardware troubleshooting and resolved PC/printer issues. Handled software installation and system configuration for operational requirements.",
 
     "exp_granesia_role": "Web Developer Intern",
-    "exp_granesia_company": "PT. Granesia Group",
-    "exp_granesia_desc": "Developed company profile website. Ensured responsive design and cross-device compatibility.",
+    "exp_granesia_company": "PT. Granesia Group Pikiran Rakyat",
+    "exp_granesia_desc": "Developed responsive landing page using HTML, CSS, and Bootstrap. Ensured cross-device compatibility for optimal viewing experience. Structured code and documentation for maintainable codebase management.",
 
     "edu_unpas_name": "Universitas Pasundan",
     "edu_unpas_degree": "B.S. Informatics Engineering",
@@ -33,6 +58,14 @@
     "edu_bangkit_name": "Bangkit Academy",
     "edu_bangkit_program": "Cloud Computing Track",
     "edu_bangkit_period": "Feb – Jul 2024",
-    "edu_bangkit_led_by": "Google, Tokopedia, Gojek, Traveloka"
+    "edu_bangkit_led_by": "Google, Tokopedia, Gojek, Traveloka",
+
+    "skills.frontend": "Frontend Development",
+    "skills.backend": "Backend Development",
+    "skills.database": "Database & Storage",
+    "skills.cloud": "Cloud & Infrastructure",
+    "skills.itsupport": "IT Support & System",
+    "skills.tools": "Tools & Development",
+    "skills.softskills": "Soft Skills"
   }
 }

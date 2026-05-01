@@ -17,6 +17,13 @@ export const experienceData = [
   },
   {
     id: 3,
+    role: "data.exp_smk_role",
+    company: "data.exp_smk_company",
+    period: "Aug 2020 – Jul 2021",
+    desc: "data.exp_smk_desc",
+  },
+  {
+    id: 4,
     role: "data.exp_granesia_role",
     company: "data.exp_granesia_company",
     period: "Aug 2019 – Nov 2019",

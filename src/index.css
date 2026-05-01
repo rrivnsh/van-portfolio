@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Mulish", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* color palette */
+/* Color palette — single source of truth */
 :root[data-theme="light"] {
   --color-bg: #ffffff;
   --color-fg: #0a0a0a;
@@ -23,38 +23,11 @@
   --color-border: #262626;
 }
 
-/* Legacy variable mappings for compatibility */
-:root[data-theme="light"] {
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #fafafa;
-  --color-bg-tertiary: #f5f5f5;
-  --color-text-primary: #171717;
-  --color-text-secondary: #737373;
-  --color-text-tertiary: #a3a3a3;
-  --color-accent: #171717;
-  --color-surface: rgba(255, 255, 255, 0.9);
-  --color-overlay: rgba(0, 0, 0, 0.04);
-  --color-overlay-hover: rgba(0, 0, 0, 0.08);
-}
-
-:root[data-theme="dark"] {
-  --color-bg-primary: #0a0a0a;
-  --color-bg-secondary: #141414;
-  --color-bg-tertiary: #1f1f1f;
-  --color-text-primary: #fafafa;
-  --color-text-secondary: #a3a3a3;
-  --color-text-tertiary: #525252;
-  --color-accent: #fafafa;
-  --color-surface: rgba(20, 20, 20, 0.9);
-  --color-overlay: rgba(255, 255, 255, 0.04);
-  --color-overlay-hover: rgba(255, 255, 255, 0.08);
-}
-
 :root {
   color-scheme: light dark;
 }
 
-/* base styles */
+/* Base styles */
 html,
 body,
 #root {
@@ -79,62 +52,87 @@ body {
   color: var(--color-bg);
 }
 
-/* typography system */
+/* Typography system */
 
-/* Display - Hero headlines */
+/* Display — Hero headlines */
 .text-display {
-  font-size: clamp(3.5rem, 12vw, 9rem);
+  font-size: clamp(4rem, 15vw, 12rem);
+  line-height: 0.85;
+  letter-spacing: -0.05em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* Headline — Section titles */
+.text-headline {
+  font-size: clamp(2.5rem, 8vw, 5rem);
   line-height: 0.9;
   letter-spacing: -0.03em;
   font-weight: 800;
+  text-transform: uppercase;
 }
 
-/* Headline - Section titles */
-.text-headline {
-  font-size: clamp(2rem, 6vw, 4rem);
-  line-height: 0.95;
+/* Title — Subsection headers */
+.text-title {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  line-height: 1.1;
   letter-spacing: -0.02em;
   font-weight: 700;
 }
 
-/* Title - Subsection headers */
-.text-title {
-  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-  line-height: 1.2;
-  letter-spacing: -0.01em;
-  font-weight: 600;
-}
-
-/* Body - Paragraph text */
+/* Body — Paragraph text */
 .text-body {
-  font-size: clamp(0.875rem, 1vw, 1rem);
-  line-height: 1.7;
+  font-size: clamp(0.875rem, 1.2vw, 1.125rem);
+  line-height: 1.6;
   font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
-/* Label - UI elements, metadata */
+/* Label — UI elements, metadata */
 .text-label {
-  font-size: 0.65rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  font-weight: 600;
-}
-
-/* Caption - Small contextual text */
-.text-caption {
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 700;
 }
 
-/* reduce motion */
+/* Caption — Small contextual text */
+.text-caption {
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Accessibility: reduce motion */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+}
+
+/* Sleek Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-subtle);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
 }

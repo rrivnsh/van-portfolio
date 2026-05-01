@@ -36,10 +36,6 @@ export default defineConfig({
             ) {
               return "react";
             }
-            // Framer Motion
-            if (id.includes("framer-motion")) {
-              return "motion";
-            }
             // i18n
             if (id.includes("i18next") || id.includes("react-i18next")) {
               return "i18n";
@@ -77,7 +73,6 @@ export default defineConfig({
       "react-dom",
       "react-i18next",
       "i18next",
-      "framer-motion",
     ],
     exclude: ["lucide-react"],
   },

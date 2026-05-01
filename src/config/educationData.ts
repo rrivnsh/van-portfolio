@@ -1,5 +1,4 @@
 // Education Data
-// Educational background displayed in the EducationOverlay
 export const educationData = [
   {
     id: 1,
