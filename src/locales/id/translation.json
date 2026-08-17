@@ -1,11 +1,11 @@
 {
   "overview": {
     "welcome": "Selamat Datang",
-    "intro": "Saya Rivan, seorang full-stack developer dari Bandung yang membangun solusi digital. Jelajahi karya, pengalaman, dan keahlian saya di bawah ini.",
-    "projects_desc": "Karya yang telah saya bangun",
-    "journey_desc": "Pengalaman dan peran",
+    "intro": "Lulusan S1 Teknik Informatika berpengalaman dalam pengembangan web dan IT Support.",
+    "projects_desc": "Proyek pilihan yang telah dibangun",
+    "journey_desc": "Pengalaman kerja dan peran profesional",
     "skills_desc": "Teknologi dan keahlian",
-    "foundations_desc": "Pendidikan dan pembelajaran",
+    "foundations_desc": "Latar belakang pendidikan",
     "nav_projects": "Projects",
     "nav_journey": "Journey",
     "nav_skills": "Skills",
@@ -16,56 +16,57 @@
   },
 
   "editorial": {
-    "available": "Terbuka untuk kerja",
-    "statement": "Saya membangun web dengan rasa ingin tahu dan kepedulian.",
+    "available": "Terbuka untuk kesempatan kerja",
+    "statement": "Mengubah masalah kompleks menjadi solusi digital yang rapi dan terstruktur.",
     "contact": "Hubungi saya",
     "return": "Kembali",
-    "projects_intro": "Setiap proyek membentuk cara saya memecahkan masalah.",
-    "journey_intro": "Peran yang mengajarkan cara membangun dan berkolaborasi.",
-    "foundations_intro": "Tempat saya membangun pemahaman.",
-    "skills_intro": "Beragam toolkit keterampilan teknis dan soft skills yang dikembangkan melalui praktik dan pembelajaran berkelanjutan."
+    "projects_intro": "Proyek pilihan yang menunjukkan kemampuan pemecahan masalah dan eksekusi teknis.",
+    "journey_intro": "Pengalaman kerja dan peran profesional.",
+    "foundations_intro": "Pendidikan formal dan latar belakang akademik.",
+    "skills_intro": "Toolkit teknis dalam pengembangan web dan IT support."
   },
 
   "data": {
-    "apotek_desc": "Sistem digital untuk operasional apotek. Berperan sebagai project lead mengkoordinasikan integrasi frontend-backend. Mengembangkan UI responsif untuk manajemen inventori, penjualan, dan customer dengan alur sistem terstruktur.",
-    "apotek_full_desc": "Sistem manajemen apotek digital di mana saya berperan sebagai project lead, mengkoordinasikan integrasi frontend-backend secara penuh. Mengembangkan antarmuka web responsif untuk manajemen inventaris, pelacakan penjualan, dan administrasi pelanggan. Mengimplementasikan alur kerja sistem terstruktur dengan sinkronisasi data real-time untuk efisiensi operasional.",
-    "ewastepas_desc": "Aplikasi web untuk pengelolaan sampah elektronik. Dibangun sebagai progressive web app dengan React dan Tailwind CSS untuk desain responsif. Mengelola permintaan jemput e-waste dengan tampilan data dinamis dan kemampuan offline.",
-    "ewastepas_full_desc": "Aplikasi web progresif (PWA) untuk platform pengumpulan dan pengelolaan sampah elektronik (e-waste). Membangun antarmuka responsif menggunakan React dan Tailwind CSS untuk pengalaman lintas perangkat yang mulus. Dilengkapi sistem permintaan penjemputan e-waste dinamis dengan pembaruan real-time dan kemampuan offline untuk aksesibilitas yang lebih baik.",
-    "babygrowth_desc": "Platform berbasis cloud untuk pemantauan kesehatan anak. Mengembangkan REST API dengan autentikasi JWT dan deployment ke Google Cloud Platform. Masuk dalam Top 50 capstone project dari 200+ tim nasional.",
-    "babygrowth_full_desc": "Platform pemantauan kesehatan anak berbasis cloud yang menghubungkan penyedia layanan kesehatan dengan orang tua. Mengembangkan REST API yang kuat dengan autentikasi JWT yang memastikan pertukaran data yang aman. Melakukan deployment ke Google Cloud Platform dengan infrastruktur yang skalabel. Diakui sebagai Top 50 capstone project dari 200+ tim nasional pada program Bangkit Academy.",
+    "tavio_desc": "Platform Link-in-Bio Commerce untuk Kreator dan Bisnis.",
+    "tavio_full_desc": "Mengembangkan frontend Tavio.id (React.js, Laravel, Inertia.js) versi 1 yang saat ini telah tersedia di production, mengimplementasikan fitur CRUD sederhana, serta memberikan masukan kebutuhan bisnis & arsitektur v2.",
 
-    "exp_gdc_role": "Curriculum Developer",
-    "exp_gdc_company": "Google Developer on Campus",
-    "exp_gdc_desc": "Menyusun materi pembelajaran cloud computing tentang Virtual Machine dan deployment aplikasi. Memandu workshop teknis yang membimbing peserta melalui latihan praktis Google Cloud Platform. Berkolaborasi dengan tim merancang kurikulum sesuai kebutuhan industri.",
+    "sixsafe_desc": "Platform Pelatihan Cybersecurity Awareness.",
+    "sixsafe_full_desc": "Mengimplementasikan UI landing page, dashboard admin, dan dashboard user menggunakan Laravel Blade Templates serta memberikan masukan UI berdasarkan alur pelatihan.",
 
-    "exp_bangkit_role": "Software Development Trainee",
+    "babygrowth_desc": "Aplikasi Pemantauan Tumbuh Kembang Anak (Bangkit Academy 2024).",
+    "babygrowth_full_desc": "Mengembangkan REST API (Node.js, JWT) untuk mendukung fitur prediksi makanan tumbuh kembang anak, serta deployment backend ke Google Compute Engine & Cloud Storage. Peraih Best Capstone Product.",
+
+    "apotek_desc": "Sistem digital manajemen operasional apotek.",
+    "apotek_full_desc": "Berperan sebagai Project Lead mengkoordinasikan integrasi frontend-backend serta antarmuka web responsif manajemen inventaris & penjualan.",
+
+    "ewastepas_desc": "Progressive Web App pengelolaan sampah elektronik.",
+    "ewastepas_full_desc": "Aplikasi web PWA pengumpulan sampah elektronik berbasis React dan Tailwind CSS dengan alur penjemputan dinamis.",
+
+    "exp_dremaxtion_role": "Frontend Developer Intern",
+    "exp_dremaxtion_company": "PT Dremaxtion Indonesia",
+    "exp_dremaxtion_desc": "Mengimplementasikan 3 landing page & fitur Dashboard/Links (authentication, modal, dropdown, context menu, multi-select, form validation) berbasis Vue.js, TypeScript, Tailwind CSS, Laravel, & Inertia.js hingga direview oleh Lead FE.",
+
+    "exp_gdc_role": "Curriculum Developer – Cloud Computing",
+    "exp_gdc_company": "Google Developer on Campus Universitas Pasundan",
+    "exp_gdc_desc": "Menyusun 2 modul pengenalan Cloud Computing & setup Virtual Machine di GCP serta memandu sesi praktik langsung deployment VM.",
+
+    "exp_bangkit_role": "Cloud Computing Cohort",
     "exp_bangkit_company": "Bangkit Academy 2024",
-    "exp_bangkit_desc": "Membangun REST API menggunakan Node.js untuk integrasi data backend-frontend yang seamless. Melakukan deployment aplikasi ke Google Cloud Platform memastikan aksesibilitas online. Bekerja dalam tim lintas fungsi dengan metodologi Agile pada proyek capstone BabyGrowth Top 50.",
+    "exp_bangkit_desc": "Mengembangkan REST API (Node.js) & deployment backend Google Compute Engine untuk aplikasi BabyGrowth (Best Capstone Product dari 200+ tim).",
 
     "exp_smk_role": "Staff Administrasi & IT Support",
-    "exp_smk_company": "SMK Angkasa Lanud Husein Sastranegara",
-    "exp_smk_desc": "Mengelola dokumentasi administrasi dan validasi data menggunakan Microsoft Excel. Melakukan troubleshooting perangkat keras dan mengatasi masalah PC/printer. Menangani instalasi software dan konfigurasi sistem sesuai kebutuhan operasional.",
-
-    "exp_granesia_role": "Web Developer Intern",
-    "exp_granesia_company": "PT. Granesia Group Pikiran Rakyat",
-    "exp_granesia_desc": "Mengembangkan landing page responsif menggunakan HTML, CSS, dan Bootstrap. Memastikan kompatibilitas lintas perangkat untuk pengalaman viewing optimal. Menyusun struktur kode dan dokumentasi untuk pengelolaan codebase yang maintainable.",
+    "exp_smk_company": "SMK Angkasa Lanud Husein Sastranegara Bandung",
+    "exp_smk_desc": "Mengelola dokumen & data administrasi Excel, troubleshooting koneksi Wi-Fi/hardware, instalasi software PC, serta konfigurasi jaringan printer.",
 
     "edu_unpas_name": "Universitas Pasundan",
-    "edu_unpas_degree": "S1 Teknik Informatika",
+    "edu_unpas_degree": "Sarjana Teknik Informatika | IPK 3.63 / 4.00",
     "edu_unpas_gpa": "IPK: 3.63 / 4.00",
     "edu_unpas_period": "2021 – 2025",
 
-    "edu_bangkit_name": "Bangkit Academy",
-    "edu_bangkit_program": "Cloud Computing Track",
-    "edu_bangkit_period": "Feb – Jul 2024",
-    "edu_bangkit_led_by": "Google, Tokopedia, Gojek, Traveloka",
-
     "skills.frontend": "Frontend Development",
     "skills.backend": "Backend Development",
-    "skills.database": "Database & Storage",
-    "skills.cloud": "Cloud & Infrastructure",
-    "skills.itsupport": "IT Support & System",
-    "skills.tools": "Tools & Development",
-    "skills.softskills": "Soft Skills"
+    "skills.database_cloud": "Database & Cloud",
+    "skills.itsupport": "IT Support & Administration",
+    "skills.tools": "Tools & Development"
   }
 }

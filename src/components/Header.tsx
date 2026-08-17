@@ -1,4 +1,4 @@
-import { useLanguage, useTheme } from "@/hooks";
+import { useTheme } from "@/context/ThemeContext";
 import { useTranslation } from "react-i18next";
 import { type TabType } from "@/config";
 
@@ -9,7 +9,11 @@ interface HeaderProps {
 export const Header = ({ setActiveTab }: HeaderProps) => {
   const { i18n } = useTranslation();
   const { toggleTheme, theme } = useTheme();
-  const { toggleLanguage } = useLanguage();
+
+  const toggleLanguage = () => {
+    const nextLang = i18n.language === "en" ? "id" : "en";
+    i18n.changeLanguage(nextLang);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 flex items-center justify-between p-6 md:p-12 z-50 bg-(--color-bg)/80 backdrop-blur-md">

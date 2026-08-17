@@ -26,21 +26,18 @@ export const ExperienceSection = () => {
               <h3 className="text-2xl md:text-4xl font-extrabold tracking-tight text-(--color-fg) group-hover:translate-x-2 md:group-hover:translate-x-4 transition-transform duration-500">
                 {t(exp.role)}
               </h3>
-              <p className="text-label text-(--color-muted) mt-3 group-hover:translate-x-2 md:group-hover:translate-x-4 transition-transform duration-500 delay-75">
+              <p className="text-label text-(--color-muted) mt-2 group-hover:translate-x-2 md:group-hover:translate-x-4 transition-transform duration-500 delay-75">
                 {t(exp.company)}
               </p>
-              <p className="text-body text-(--color-muted) mt-6 max-w-2xl leading-relaxed lg:hidden">
+              <p className="text-body text-(--color-muted) mt-4 max-w-3xl leading-relaxed whitespace-pre-line">
                 {t(exp.desc)}
               </p>
             </div>
 
             {/* metadata details */}
-            <div className="flex flex-col lg:items-end text-left lg:text-right w-full lg:w-1/3 mt-4 lg:mt-0">
+            <div className="flex flex-col lg:items-end text-left lg:text-right w-full lg:w-1/3 mt-2 lg:mt-0">
               <p className="text-[0.65rem] font-bold tracking-[0.2em] uppercase text-(--color-subtle)">
                 {exp.period}
-              </p>
-              <p className="hidden lg:block text-body text-(--color-muted) mt-4 max-w-sm text-right leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                {t(exp.desc)}
               </p>
             </div>
           </article>

@@ -1,11 +1,11 @@
 {
   "overview": {
     "welcome": "Welcome",
-    "intro": "I'm Rivan, a full-stack developer from Bandung building digital solutions. Explore my work, experience, and skills below.",
-    "projects_desc": "Work I've built and shipped",
-    "journey_desc": "Experience and roles",
+    "intro": "Informatics Engineering graduate experienced in web development and IT Support.",
+    "projects_desc": "Selected work and shipped projects",
+    "journey_desc": "Work experience and professional roles",
     "skills_desc": "Technologies and expertise",
-    "foundations_desc": "Education and learning",
+    "foundations_desc": "Educational background",
     "nav_projects": "Projects",
     "nav_journey": "Journey",
     "nav_skills": "Skills",
@@ -16,56 +16,57 @@
   },
 
   "editorial": {
-    "available": "Open to work",
-    "statement": "I build the web with curiosity and intention.",
-    "contact": "Say hello",
+    "available": "Available for work opportunities",
+    "statement": "Turning complex problems into clean, structured digital solutions.",
+    "contact": "Contact me",
     "return": "Back",
-    "projects_intro": "Each project shaped how I approach problems.",
-    "journey_intro": "Roles that taught me how to build and collaborate.",
-    "foundations_intro": "Where I built my understanding.",
-    "skills_intro": "A diverse toolkit of technical and soft skills developed through practice and continuous learning."
+    "projects_intro": "Selected projects demonstrating problem-solving capabilities and technical execution.",
+    "journey_intro": "Work experience and professional roles.",
+    "foundations_intro": "Formal education and academic background.",
+    "skills_intro": "Technical toolkit in web development and IT support."
   },
 
   "data": {
-    "apotek_desc": "Digital system for pharmacy operations. Served as project lead coordinating frontend-backend integration. Developed responsive UI for inventory, sales, and customer management with structured system workflows.",
-    "apotek_full_desc": "Digital pharmacy management system serving as project lead coordinating full frontend-backend integration. Developed responsive web interface for inventory management, sales tracking, and customer administration. Implemented structured system workflows with real-time data synchronization for operational efficiency.",
-    "ewastepas_desc": "Web application for electronic waste collection and management. Built progressive web app with React and Tailwind CSS for responsive design. Manages e-waste pickup requests with dynamic data display and offline capability.",
-    "ewastepas_full_desc": "Progressive web application for electronic waste collection and management platform. Built responsive interface using React and Tailwind CSS for seamless cross-device experience. Features dynamic e-waste pickup request system with real-time updates and offline capability for enhanced accessibility.",
-    "babygrowth_desc": "Cloud-based child health tracking platform. Developed REST API with JWT authentication and deployed to Google Cloud Platform. Named among Top 50 capstone projects from 200+ teams nationwide.",
-    "babygrowth_full_desc": "Cloud-based child health tracking platform connecting healthcare providers and parents. Developed robust REST APIs with JWT authentication ensuring secure data exchange. Deployed to Google Cloud Platform with scalable infrastructure. Recognized as Top 50 capstone project among 200+ teams nationwide in Bangkit Academy cohort.",
+    "tavio_desc": "Link-in-Bio Commerce Platform for Creators and Businesses.",
+    "tavio_full_desc": "Developed Tavio.id v1 frontend (React.js, Laravel, Inertia.js) currently live in production, implemented CRUD features, and contributed to v2 business & architecture roadmap.",
 
-    "exp_gdc_role": "Curriculum Developer",
-    "exp_gdc_company": "Google Developer on Campus",
-    "exp_gdc_desc": "Developed practical cloud computing learning materials on Virtual Machine and application deployment. Led technical workshops mentoring participants through hands-on Google Cloud Platform exercises. Collaborated with team to design curriculum aligned with industry needs.",
+    "sixsafe_desc": "Cybersecurity Awareness Training Platform.",
+    "sixsafe_full_desc": "Implemented landing page, admin dashboard, and user dashboard UI using Laravel Blade Templates and provided UI optimization feedback.",
 
-    "exp_bangkit_role": "Software Development Trainee",
+    "babygrowth_desc": "Child Growth Monitoring App (Bangkit Academy 2024).",
+    "babygrowth_full_desc": "Developed Node.js REST API with JWT auth for food prediction features, deployed backend to Google Compute Engine & Cloud Storage. Best Capstone Product award winner.",
+
+    "apotek_desc": "Digital Pharmacy Management System.",
+    "apotek_full_desc": "Served as Project Lead coordinating full frontend-backend integration and responsive inventory & sales UI.",
+
+    "ewastepas_desc": "Electronic waste collection Progressive Web App.",
+    "ewastepas_full_desc": "Responsive PWA for electronic waste recycling built with React and Tailwind CSS.",
+
+    "exp_dremaxtion_role": "Frontend Developer Intern",
+    "exp_dremaxtion_company": "PT Dremaxtion Indonesia",
+    "exp_dremaxtion_desc": "Implemented 3 landing pages & Dashboard/Links features (authentication, modals, dropdowns, context menus, form validation) using Vue.js, TypeScript, Tailwind CSS, Laravel, & Inertia.js reviewed by Lead FE.",
+
+    "exp_gdc_role": "Curriculum Developer – Cloud Computing",
+    "exp_gdc_company": "Google Developer on Campus UNPAS",
+    "exp_gdc_desc": "Authored 2 Cloud Computing & VM setup modules on GCP and conducted practical VM deployment workshops.",
+
+    "exp_bangkit_role": "Cloud Computing Cohort",
     "exp_bangkit_company": "Bangkit Academy 2024",
-    "exp_bangkit_desc": "Built REST APIs using Node.js for seamless backend-frontend data integration. Deployed applications to Google Cloud Platform ensuring online accessibility. Worked in cross-functional Agile teams on BabyGrowth capstone project recognized as Top 50 among 200+ teams.",
+    "exp_bangkit_desc": "Developed REST APIs (Node.js) & deployed backend services on Google Compute Engine for BabyGrowth (Best Capstone Product out of 200+ teams).",
 
     "exp_smk_role": "Staff Administrasi & IT Support",
-    "exp_smk_company": "SMK Angkasa Lanud Husein Sastranegara",
-    "exp_smk_desc": "Managed administrative documentation and data validation using Microsoft Excel. Performed hardware troubleshooting and resolved PC/printer issues. Handled software installation and system configuration for operational requirements.",
-
-    "exp_granesia_role": "Web Developer Intern",
-    "exp_granesia_company": "PT. Granesia Group Pikiran Rakyat",
-    "exp_granesia_desc": "Developed responsive landing page using HTML, CSS, and Bootstrap. Ensured cross-device compatibility for optimal viewing experience. Structured code and documentation for maintainable codebase management.",
+    "exp_smk_company": "SMK Angkasa Lanud Husein Sastranegara Bandung",
+    "exp_smk_desc": "Managed Excel administrative data, performed Wi-Fi/hardware troubleshooting, software installation, and network printer setup.",
 
     "edu_unpas_name": "Universitas Pasundan",
-    "edu_unpas_degree": "B.S. Informatics Engineering",
+    "edu_unpas_degree": "B.S. Informatics Engineering | GPA 3.63 / 4.00",
     "edu_unpas_gpa": "GPA: 3.63 / 4.00",
     "edu_unpas_period": "2021 – 2025",
 
-    "edu_bangkit_name": "Bangkit Academy",
-    "edu_bangkit_program": "Cloud Computing Track",
-    "edu_bangkit_period": "Feb – Jul 2024",
-    "edu_bangkit_led_by": "Google, Tokopedia, Gojek, Traveloka",
-
     "skills.frontend": "Frontend Development",
     "skills.backend": "Backend Development",
-    "skills.database": "Database & Storage",
-    "skills.cloud": "Cloud & Infrastructure",
-    "skills.itsupport": "IT Support & System",
-    "skills.tools": "Tools & Development",
-    "skills.softskills": "Soft Skills"
+    "skills.database_cloud": "Database & Cloud",
+    "skills.itsupport": "IT Support & Administration",
+    "skills.tools": "Tools & Development"
   }
 }

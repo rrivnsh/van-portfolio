@@ -1,17 +1,6 @@
-// AppProvider Component
-// Combines all context providers for the application
 import type { ReactNode } from "react";
 import { ThemeProvider } from "./ThemeContext";
-import { LanguageProvider } from "./LanguageContext";
 
-interface AppProviderProps {
-  children: ReactNode;
-}
-
-export function AppProvider({ children }: AppProviderProps) {
-  return (
-    <ThemeProvider>
-      <LanguageProvider>{children}</LanguageProvider>
-    </ThemeProvider>
-  );
+export function AppProvider({ children }: { children: ReactNode }) {
+  return <ThemeProvider>{children}</ThemeProvider>;
 }
