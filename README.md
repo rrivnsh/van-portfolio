@@ -20,7 +20,6 @@ High-performance, editorial portfolio with a single-screen zero-scroll canvas, d
 1. **Static Edge Asset Delivery**:
    - The entire production build (`dist/`) compiles into immutable static assets (`HTML`, `CSS`, `JS`, `Images`, `PDFs`).
    - Deployed to edge CDN networks (e.g. Cloudflare Pages, Vercel Edge, GCP Cloud CDN).
-   - Serves 10,000+ concurrent requests per second with sub-50ms latency worldwide and 0% risk of server crash.
 2. **Chunk Splitting & Tree-Shaking**:
    - Vendor chunks (`react`, `i18n`, `icons`, `vendor`) are separated with long-term immutable caching (`Cache-Control: max-age=31536000, immutable`).
 3. **Canvas Performance Guard**:
