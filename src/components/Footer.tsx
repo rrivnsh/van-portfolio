@@ -1,45 +1,29 @@
-import { socialLinks } from "@/config";
-import { useJakartaTime } from "@/hooks";
-import { useTranslation } from "react-i18next";
+import { ArrowUp } from "lucide-react";
 
 export const Footer = () => {
-  const { t } = useTranslation();
-  const time = useJakartaTime();
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
-    <footer className="fixed bottom-0 left-0 right-0 flex flex-col md:flex-row items-center justify-between p-6 md:px-12 md:py-8 z-50 bg-(--color-bg)/80 backdrop-blur-md gap-6">
-      {/* social links */}
-      <div className="flex items-center gap-6">
-        {socialLinks.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-(--color-subtle) hover:text-(--color-fg) transition-colors scale-90 hover:scale-110"
-            aria-label={link.label}
-          >
-            {link.icon}
-          </a>
-        ))}
-      </div>
-
-      {/* availability status */}
-      <div className="hidden lg:block">
-        <p className="text-[0.6rem] font-black tracking-[0.3em] uppercase text-(--color-subtle)">
-          {t("editorial.available", "TERBUKA UNTUK KERJA")}
-        </p>
-      </div>
-
-      {/* location and time */}
-      <div className="text-center md:text-right flex flex-col md:flex-row items-center gap-4 md:gap-8">
-        <div className="flex flex-col">
-           <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase text-(--color-subtle)">Location</span>
-           <span className="text-[0.65rem] font-black tracking-widest text-(--color-fg)">Bandung, ID</span>
+    <footer className="border-t border-(--color-border) bg-(--color-surface)/50 backdrop-blur-xs py-8 px-5 sm:px-8 md:px-12 transition-colors duration-200">
+      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-(--color-muted)">
+        {/* Copyright */}
+        <div className="flex items-center gap-2">
+          <span>© {new Date().getFullYear()} Muhamad Rivan Sahronie.</span>
+          <span className="hidden sm:inline">Crafted with precision.</span>
         </div>
-        <div className="flex flex-col">
-           <span className="text-[0.55rem] font-bold tracking-[0.2em] uppercase text-(--color-subtle)">Current Time</span>
-           <span className="text-[0.65rem] font-black tracking-widest text-(--color-fg)">{time}</span>
+
+        {/* Back to Top */}
+        <div className="flex items-center gap-4">
+          <button
+            onClick={scrollToTop}
+            className="inline-flex items-center gap-1 text-xs font-semibold text-(--color-muted) hover:text-(--color-fg) transition-colors cursor-pointer"
+            aria-label="Scroll back to top"
+          >
+            <span>Back to top</span>
+            <ArrowUp className="w-3.5 h-3.5" aria-hidden="true" />
+          </button>
         </div>
       </div>
     </footer>

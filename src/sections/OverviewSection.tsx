@@ -1,73 +1,96 @@
-import type { TabType } from "@/config";
-import { contactData, navItems } from "@/config";
 import { useTranslation } from "react-i18next";
+import { ArrowDownRight, Mail, FileDown, MapPin, Award, CheckCircle2, Terminal } from "lucide-react";
 
-// ignore pdf import resolution
 import cvEn from "@/assets/cv/CV_M Rivan Sahronie.pdf";
-// ignore pdf import resolution
 import cvId from "@/assets/cv/CV_Muhamad Rivan Sahronie.pdf";
 
-const OverviewSection = ({
-  onNavigate,
-}: {
-  onNavigate: (tab: TabType) => void;
-}) => {
+interface OverviewSectionProps {
+  onNavigateSection?: (sectionId: string) => void;
+}
+
+export const OverviewSection = ({ onNavigateSection }: OverviewSectionProps) => {
   const { t, i18n } = useTranslation();
 
   const cvUrl = i18n.language === "en" ? cvEn : cvId;
-  const cvFileName = i18n.language === "en" ? "CV_M Rivan Sahronie.pdf" : "CV_Muhamad Rivan Sahronie.pdf";
+  const cvFileName =
+    i18n.language === "en"
+      ? "CV_M_Rivan_Sahronie.pdf"
+      : "CV_Muhamad_Rivan_Sahronie.pdf";
+
+  const handleNavigate = (id: string) => {
+    if (onNavigateSection) {
+      onNavigateSection(id);
+    }
+  };
 
   return (
-    <div className="flex-1 flex flex-col md:flex-row items-start md:items-center justify-center md:justify-between gap-16 md:gap-12 w-full h-full">
-      {/* hero bio section */}
-      <div className="flex-1 flex flex-col justify-center max-w-xl">
-        <h1 className="text-display text-(--color-fg) mb-2">RIVAN</h1>
-        <p className="text-caption text-(--color-subtle) mb-8 md:mb-10 w-fit border-b border-(--color-border)/30 pb-2">
-          Muhamad Rivan Sahronie
-        </p>
-        <p className="text-body text-(--color-muted) mb-12 max-w-md">
-          {t(
-            "editorial.statement",
-            "Saya membangun web dengan rasa ingin tahu dan kepedulian.",
-          )}
-        </p>
-        <div className="flex flex-col gap-4">
-          <a
-            href={`mailto:${contactData.email}`}
-            className="group flex items-center gap-3 text-caption text-(--color-fg) hover:text-(--color-muted) transition-colors w-fit"
+    <div className="min-h-[75vh] flex flex-col justify-center py-8 sm:py-12 md:py-16 w-full">
+      <div className="w-full space-y-8 max-w-4xl">
+        <div className="flex flex-wrap items-center gap-3 text-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-(--color-border) bg-(--color-surface) text-(--color-fg) font-medium">
+            <span className="w-2 h-2 rounded-full bg-(--color-fg)" aria-hidden="true" />
+            <span>{t("hero.available", "Open to work opportunities")}</span>
+          </div>
+
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-(--color-border) bg-(--color-surface) text-(--color-muted) font-mono">
+            <MapPin className="w-3.5 h-3.5 text-(--color-fg)" aria-hidden="true" />
+            <span>Bandung, Indonesia</span>
+          </div>
+        </div>
+
+        <div className="space-y-4">
+          <h1 className="text-display font-bold tracking-tight text-(--color-fg)">
+            Muhamad Rivan Sahronie
+          </h1>
+          <p className="text-xl sm:text-2xl md:text-3xl font-medium text-(--color-muted) leading-relaxed">
+            {t("hero.headline", "Mengubah masalah kompleks menjadi solusi digital yang rapi, efisien, dan terstruktur.")}
+          </p>
+        </div>
+
+        <div className="flex flex-wrap gap-2.5 pt-1 text-xs font-mono">
+          <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-(--color-border) bg-(--color-surface) text-(--color-fg)">
+            <Award className="w-3.5 h-3.5 text-(--color-fg)" />
+            <span>Best Capstone · Bangkit '24</span>
+          </div>
+
+          <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-(--color-border) bg-(--color-surface) text-(--color-fg)">
+            <CheckCircle2 className="w-3.5 h-3.5 text-(--color-fg)" />
+            <span>Informatics · Unpas</span>
+          </div>
+
+          <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border border-(--color-border) bg-(--color-surface) text-(--color-fg)">
+            <Terminal className="w-3.5 h-3.5 text-(--color-fg)" />
+            <span>Vue · React · Laravel · Node · GCP</span>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-3.5 pt-4">
+          <button
+            onClick={() => handleNavigate("work")}
+            className="inline-flex items-center gap-2 px-6 py-3.5 bg-(--color-fg) text-(--color-bg) font-semibold text-sm rounded-xl hover:opacity-90 transition-all cursor-pointer min-h-[44px] focus-visible:outline-2"
           >
-            <span className="w-8 h-px bg-(--color-fg) group-hover:w-12 transition-all duration-300" />
-            {t("editorial.contact", "HUBUNGI SAYA")}
-          </a>
+            <span>{t("hero.cta_work", "Lihat Proyek")}</span>
+            <ArrowDownRight className="w-4 h-4" aria-hidden="true" />
+          </button>
+
+          <button
+            onClick={() => handleNavigate("contact")}
+            className="inline-flex items-center gap-2 px-5 py-3.5 bg-(--color-surface) text-(--color-fg) font-semibold text-sm rounded-xl border border-(--color-border) hover:bg-(--color-surface-raised) transition-all cursor-pointer min-h-[44px] focus-visible:outline-2"
+          >
+            <Mail className="w-4 h-4 text-(--color-muted)" aria-hidden="true" />
+            <span>{t("hero.cta_contact", "Hubungi Saya")}</span>
+          </button>
+
           <a
             href={cvUrl}
             download={cvFileName}
-            className="group flex items-center gap-3 text-caption text-(--color-fg) hover:text-(--color-muted) transition-colors w-fit"
+            className="inline-flex items-center gap-2 px-4 py-3.5 text-xs font-mono font-semibold tracking-wider text-(--color-muted) hover:text-(--color-fg) transition-colors cursor-pointer min-h-[44px]"
           >
-            <span className="w-8 h-px bg-(--color-fg) group-hover:w-12 transition-all duration-300" />
-            {i18n.language === "en" ? "DOWNLOAD CV" : "UNDUH CV"}
+            <FileDown className="w-4 h-4 text-(--color-fg)" aria-hidden="true" />
+            <span>{t("hero.cta_cv", "Unduh CV")} ({i18n.language.toUpperCase()})</span>
           </a>
         </div>
-      </div>
-
-      {/* navigation menu */}
-      <div className="flex flex-col items-start md:items-end gap-6 md:gap-8 justify-center">
-        {navItems.map((item) => (
-          <button
-            key={item.key}
-            onClick={() => onNavigate(item.key)}
-            className="group relative text-label md:text-title text-(--color-subtle) hover:text-(--color-fg) transition-colors text-left md:text-right cursor-pointer py-2 overflow-hidden"
-          >
-            <span className="relative z-10">
-              {t(item.translationKey, item.label)}
-            </span>
-            {/* hover effect decoration */}
-            <span className="absolute left-0 top-1/2 -translate-y-1/2 w-0 h-0.5 bg-(--color-fg)/20 group-hover:w-full transition-all duration-500 ease-out z-0" />
-          </button>
-        ))}
       </div>
     </div>
   );
 };
-
-export { OverviewSection };

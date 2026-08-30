@@ -8,7 +8,6 @@
 
     /* Bundler mode */
     "moduleResolution": "bundler",
-
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
@@ -20,9 +19,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    /* Path aliases */
-    "ignoreDeprecations": "6.0",
-    "baseUrl": ".",
+    /* Path aliases (TypeScript 4.1+ no longer requires baseUrl for paths) */
     "paths": {
       "@/*": ["./src/*"]
     }

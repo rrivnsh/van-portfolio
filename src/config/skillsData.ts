@@ -1,75 +1,67 @@
 // Skills Data
-// Categorized skills and expertise areas
-interface SkillCategory {
+// Categorized capabilities and expertise areas for the versatile generalist profile
+
+export interface SkillCategory {
   id: number;
   category: string;
-  key: string; // for i18n
+  key: string;
   skills: string[];
 }
 
 export const skillsData: SkillCategory[] = [
   {
     id: 1,
-    category: "Frontend Development",
-    key: "data.skills.frontend",
+    category: "Frontend Engineering",
+    key: "skills.build",
     skills: [
       "React.js",
       "Vue.js",
-      "JavaScript",
       "TypeScript",
-      "HTML",
-      "CSS",
+      "JavaScript",
       "Tailwind CSS",
+      "Inertia.js",
+      "HTML5 / CSS3",
+      "Responsive UI",
     ],
   },
   {
     id: 2,
-    category: "Backend Development",
-    key: "data.skills.backend",
+    category: "Backend & APIs",
+    key: "skills.data_apis",
     skills: [
       "Node.js",
       "Express.js",
       "Laravel",
-      "REST API",
+      "RESTful API",
       "JWT Authentication",
+      "MySQL",
+      "PostgreSQL",
     ],
   },
   {
     id: 3,
-    category: "Database & Cloud",
-    key: "data.skills.database_cloud",
+    category: "Cloud & Infrastructure",
+    key: "skills.cloud_devops",
     skills: [
-      "MySQL",
-      "PostgreSQL",
       "Google Cloud Platform",
-      "Compute Engine",
+      "Google Compute Engine",
       "Cloud Storage",
+      "Linux / Shell",
+      "Docker",
+      "Git / GitHub / GitLab",
     ],
   },
   {
     id: 4,
-    category: "Tools & Development",
-    key: "data.skills.tools",
+    category: "IT Operations & Support",
+    key: "skills.tools_support",
     skills: [
-      "Git",
-      "GitHub",
-      "GitLab",
-      "Linux",
-      "Docker",
+      "Hardware Troubleshooting",
+      "Network Configuration",
+      "Software Installation",
+      "Microsoft Excel",
+      "Technical Documentation",
       "Figma",
     ],
   },
-  {
-    id: 5,
-    category: "IT Support & Administration",
-    key: "data.skills.itsupport",
-    skills: [
-      "Microsoft Excel",
-      "Windows/Linux",
-      "Software Installation",
-      "Hardware Troubleshooting",
-      "System Documentation",
-    ],
-  },
 ];
-

@@ -19,9 +19,11 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: "id",
-    lng: "id",
+    fallbackLng: "en",
+    lng: "en",
     interpolation: {
       escapeValue: false,
     },
   });
+
+export default i18n;

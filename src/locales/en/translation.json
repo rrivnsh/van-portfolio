@@ -1,72 +1,150 @@
 {
   "overview": {
     "welcome": "Welcome",
-    "intro": "Informatics Engineering graduate experienced in web development and IT Support.",
-    "projects_desc": "Selected work and shipped projects",
-    "journey_desc": "Work experience and professional roles",
-    "skills_desc": "Technologies and expertise",
-    "foundations_desc": "Educational background",
+    "intro": "Informatics graduate with experience in modern web development, REST APIs, and cloud deployments.",
+    "projects_desc": "Selected systems and applications",
+    "journey_desc": "Work experience and professional background",
+    "skills_desc": "Technical skills and tools",
+    "foundations_desc": "Academic education",
     "nav_projects": "Projects",
-    "nav_journey": "Journey",
+    "nav_journey": "Experience",
     "nav_skills": "Skills",
-    "nav_foundations": "Foundations",
-    "stat_projects": "Projects",
-    "stat_experiences": "Experiences",
-    "stat_skills": "Skill Areas"
+    "nav_foundations": "Education"
   },
 
-  "editorial": {
-    "available": "Available for work opportunities",
-    "statement": "Turning complex problems into clean, structured digital solutions.",
-    "contact": "Contact me",
-    "return": "Back",
-    "projects_intro": "Selected projects demonstrating problem-solving capabilities and technical execution.",
-    "journey_intro": "Work experience and professional roles.",
-    "foundations_intro": "Formal education and academic background.",
-    "skills_intro": "Technical toolkit in web development and IT support."
+  "hero": {
+    "available": "Open to work opportunities",
+    "greeting": "Hi, I'm",
+    "headline": "Transforming complex challenges into clean, structured digital solutions.",
+    "statement": "Web developer & tech generalist focusing on modern frontend interfaces, REST APIs, and cloud infrastructure.",
+    "specialization": "Experienced in Vue.js, React, Laravel, Node.js, and Google Cloud Platform.",
+    "cta_work": "Explore Projects",
+    "cta_contact": "Get in Touch",
+    "cta_cv": "Download CV",
+    "location": "Bandung, Indonesia",
+    "proof_bangkit": "Best Capstone Product (Bangkit Academy 2024)",
+    "proof_focus": "Frontend, Cloud Backend, & IT Support"
+  },
+
+  "projects": {
+    "label": "PROJECTS",
+    "heading": "Featured Projects",
+    "prev_slide": "Previous",
+    "next_slide": "Next",
+    "explore": "Visit Website",
+    "details": "Project Details",
+    "role_label": "Role",
+    "year_label": "Year",
+    "slide_count": "Project",
+    "intro": "A curated collection of web applications, cloud backends, and digital platforms."
+  },
+
+  "project_detail": {
+    "overview": "Overview",
+    "contribution": "Key Contributions",
+    "technologies": "Technologies",
+    "context": "Background",
+    "outcome": "Results",
+    "live": "Visit Live Site",
+    "repository": "GitHub Repository",
+    "close": "Close",
+    "zoom": "Click to zoom",
+    "zoom_in": "Zoom in",
+    "zoom_out": "Zoom out",
+    "reset": "Reset",
+    "close_zoom": "Close zoom",
+    "role_label": "Role",
+    "next_project": "Next Project"
+  },
+
+  "journey": {
+    "label": "EXPERIENCE",
+    "heading": "Work Experience",
+    "intro": "Professional track record in web engineering, cloud curriculum development, and IT operations."
+  },
+
+  "skills_section": {
+    "label": "TECHNICAL SKILLS",
+    "heading": "Skills & Technologies",
+    "intro": "Technologies and tools utilized across web development, cloud services, and IT systems."
+  },
+
+  "education": {
+    "label": "EDUCATION",
+    "heading": "Education & Achievements",
+    "intro": "Academic background and technical development programs."
+  },
+
+  "contact": {
+    "label": "CONTACT",
+    "heading_line1": "Let's build something meaningful.",
+    "heading_line2": "Feel free to reach out directly.",
+    "email_cta": "Send an Email",
+    "cv_cta": "Download CV",
+    "available": "Available for full-time roles and project collaborations"
+  },
+
+  "nav": {
+    "overview": "Overview",
+    "work": "Projects",
+    "journey": "Experience",
+    "skills": "Skills",
+    "foundations": "Education",
+    "contact": "Contact"
+  },
+
+  "sidebar": {
+    "subtitle": "Web & Cloud Developer"
   },
 
   "data": {
-    "tavio_desc": "Link-in-Bio Commerce Platform for Creators and Businesses.",
-    "tavio_full_desc": "Developed Tavio.id v1 frontend (React.js, Laravel, Inertia.js) currently live in production, implemented CRUD features, and contributed to v2 business & architecture roadmap.",
+    "tavio_desc": "Link-in-bio commerce platform for creators and digital businesses.",
+    "tavio_full_desc": "Built the frontend of Tavio.id v1 using React.js, Laravel, and Inertia.js, currently live in production. Implemented product link management, store features, and contributed to requirements for v2.",
+    "tavio_contribution": "Developed the complete v1 user interface, integrated frontend with backend APIs, and assisted in planning the v2 architecture.",
 
-    "sixsafe_desc": "Cybersecurity Awareness Training Platform.",
-    "sixsafe_full_desc": "Implemented landing page, admin dashboard, and user dashboard UI using Laravel Blade Templates and provided UI optimization feedback.",
+    "sixsafe_desc": "Cybersecurity awareness training platform.",
+    "sixsafe_full_desc": "Implemented the landing page, admin dashboard, and trainee portal using Laravel Blade templates. Provided user experience feedback during feature testing.",
+    "sixsafe_contribution": "Built responsive layouts for landing and dashboard pages, ensuring smooth navigation across cybersecurity training modules.",
 
-    "babygrowth_desc": "Child Growth Monitoring App (Bangkit Academy 2024).",
-    "babygrowth_full_desc": "Developed Node.js REST API with JWT auth for food prediction features, deployed backend to Google Compute Engine & Cloud Storage. Best Capstone Product award winner.",
+    "babygrowth_desc": "Child growth monitoring application developed during Bangkit Academy 2024.",
+    "babygrowth_full_desc": "Developed a Node.js REST API with JWT authentication for food recommendation features, and deployed backend services to Google Compute Engine and Cloud Storage. Awarded Best Capstone Product among 200+ teams.",
+    "babygrowth_contribution": "Created backend API endpoints, configured authentication, and handled cloud deployment on Google Cloud Platform.",
 
-    "apotek_desc": "Digital Pharmacy Management System.",
-    "apotek_full_desc": "Served as Project Lead coordinating full frontend-backend integration and responsive inventory & sales UI.",
+    "apotek_desc": "Digital management system for pharmacy inventory and sales.",
+    "apotek_full_desc": "Served as project lead coordinating team progress and building responsive user interfaces for inventory tracking and transaction records.",
+    "apotek_contribution": "Led project coordination and implemented frontend interfaces for stock management and sales reporting.",
 
-    "ewastepas_desc": "Electronic waste collection Progressive Web App.",
-    "ewastepas_full_desc": "Responsive PWA for electronic waste recycling built with React and Tailwind CSS.",
+    "ewastepas_desc": "Progressive Web App for electronic waste collection.",
+    "ewastepas_full_desc": "Responsive web app for scheduling electronic waste pickups, built with React and Tailwind CSS.",
+    "ewastepas_contribution": "Implemented user request forms and responsive pickup schedules.",
 
     "exp_dremaxtion_role": "Frontend Developer Intern",
-    "exp_dremaxtion_company": "PT Dremaxtion Indonesia",
-    "exp_dremaxtion_desc": "Implemented 3 landing pages & Dashboard/Links features (authentication, modals, dropdowns, context menus, form validation) using Vue.js, TypeScript, Tailwind CSS, Laravel, & Inertia.js reviewed by Lead FE.",
+    "exp_dremaxtion_company": "PT Dremaxtion Teknologi Internasional",
+    "exp_dremaxtion_desc": "Implemented 3 landing pages from Figma designs using Vue.js, TypeScript, Tailwind CSS, Laravel, and Inertia.js. Built Dashboard Links features including auth, modals, dropdowns, and form validation, plus component refactoring.",
+    "exp_dremaxtion_period": "Jun 2026 - Present",
 
-    "exp_gdc_role": "Curriculum Developer – Cloud Computing",
-    "exp_gdc_company": "Google Developer on Campus UNPAS",
-    "exp_gdc_desc": "Authored 2 Cloud Computing & VM setup modules on GCP and conducted practical VM deployment workshops.",
+    "exp_gdc_role": "Curriculum Developer, Cloud Computing",
+    "exp_gdc_company": "Google Developer on Campus Universitas Pasundan",
+    "exp_gdc_desc": "Authored 2 learning modules on Cloud Computing basics and Virtual Machine setup using Google Cloud Platform, and led hands-on deployment sessions for students.",
+    "exp_gdc_period": "Oct 2024 - Sep 2025",
 
     "exp_bangkit_role": "Cloud Computing Cohort",
-    "exp_bangkit_company": "Bangkit Academy 2024",
-    "exp_bangkit_desc": "Developed REST APIs (Node.js) & deployed backend services on Google Compute Engine for BabyGrowth (Best Capstone Product out of 200+ teams).",
+    "exp_bangkit_company": "Bangkit Academy led by Google, GoTo, & Traveloka",
+    "exp_bangkit_desc": "Developed REST APIs in Node.js and deployed cloud services on Google Compute Engine for BabyGrowth, which received the Best Capstone Product award out of 200+ teams.",
+    "exp_bangkit_period": "Feb 2024 - Jul 2024",
 
-    "exp_smk_role": "Staff Administrasi & IT Support",
+    "exp_smk_role": "Administrative Staff & IT Support",
     "exp_smk_company": "SMK Angkasa Lanud Husein Sastranegara Bandung",
-    "exp_smk_desc": "Managed Excel administrative data, performed Wi-Fi/hardware troubleshooting, software installation, and network printer setup.",
+    "exp_smk_desc": "Managed administrative records in Microsoft Excel, performed troubleshooting for Wi-Fi and PC software, and configured multi-PC shared printer networking.",
+    "exp_smk_period": "Aug 2020 - Jul 2021",
 
     "edu_unpas_name": "Universitas Pasundan",
-    "edu_unpas_degree": "B.S. Informatics Engineering | GPA 3.63 / 4.00",
-    "edu_unpas_gpa": "GPA: 3.63 / 4.00",
-    "edu_unpas_period": "2021 – 2025",
+    "edu_unpas_degree": "Bachelor of Informatics Engineering",
+    "edu_unpas_period": "2021 - 2025",
 
-    "skills.frontend": "Frontend Development",
-    "skills.backend": "Backend Development",
-    "skills.database_cloud": "Database & Cloud",
-    "skills.itsupport": "IT Support & Administration",
-    "skills.tools": "Tools & Development"
+    "skills.build": "Frontend Engineering",
+    "skills.data_apis": "Backend & APIs",
+    "skills.cloud_devops": "Cloud & Infrastructure",
+    "skills.tools_support": "IT Operations & Support"
   }
 }

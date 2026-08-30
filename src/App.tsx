@@ -1,64 +1,137 @@
-import { type TabType } from "@/config";
+import { useState } from "react";
 import {
-  EducationSection,
-  ExperienceSection,
   OverviewSection,
   ProjectsSection,
+  ExperienceSection,
   SkillsSection,
+  EducationSection,
+  ContactSection,
 } from "@/sections";
-import { Header, Footer, Loading } from "@/components";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-
-const sectionTitleKeys: Record<Exclude<TabType, "overview">, string> = {
-  projects: "overview.nav_projects",
-  experience: "overview.nav_journey",
-  skills: "overview.nav_skills",
-  education: "overview.nav_foundations",
-};
+import { Sidebar, Footer, Loading, InteractiveBackground, BottomNavbar } from "@/components";
+import { motion, AnimatePresence } from "motion/react";
+import { ChevronUp, ChevronDown } from "lucide-react";
+import { useSectionNavigation } from "@/hooks/useSectionNavigation";
 
 function App() {
-  const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState<TabType>("overview");
   const [isLoading, setIsLoading] = useState(true);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+
+  const {
+    activeSection,
+    handleNavigateSection,
+    goToNextSection,
+    goToPrevSection,
+    prevSection,
+    nextSection,
+    sections,
+  } = useSectionNavigation();
 
   if (isLoading) {
     return <Loading onLoadingComplete={() => setIsLoading(false)} />;
   }
 
+  const renderActiveSection = () => {
+    switch (activeSection) {
+      case "work":
+        return <ProjectsSection />;
+      case "journey":
+        return <ExperienceSection />;
+      case "capabilities":
+        return <SkillsSection />;
+      case "foundations":
+        return <EducationSection />;
+      case "contact":
+        return <ContactSection />;
+      case "hero":
+      default:
+        return <OverviewSection onNavigateSection={handleNavigateSection} />;
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-(--color-bg) text-(--color-fg) flex flex-col relative">
-      <Header setActiveTab={setActiveTab} />
+    <div className="min-h-screen bg-(--color-bg) text-(--color-fg) flex flex-col relative selection:bg-(--color-fg) selection:text-(--color-bg)">
+      <InteractiveBackground />
 
-      <main className="flex-1 flex flex-col pt-32 pb-40 md:pt-40 md:pb-48 px-6 md:px-12 relative">
-        {activeTab === "overview" && (
-          <OverviewSection onNavigate={setActiveTab} />
-        )}
+      <Sidebar
+        activeSection={activeSection}
+        onNavigateSection={handleNavigateSection}
+        isCollapsed={isSidebarCollapsed}
+        onToggleCollapse={() => setIsSidebarCollapsed(!isSidebarCollapsed)}
+      />
 
-        {activeTab !== "overview" && (
-          <div className="flex-1 flex flex-col w-full max-w-7xl mx-auto pr-0">
-            <div className="flex justify-end mb-8 md:mb-12">
-              <button
-                onClick={() => setActiveTab("overview")}
-                className="group flex items-center gap-3 text-caption text-(--color-subtle) hover:text-(--color-fg) transition-colors cursor-pointer"
-              >
-                {t("editorial.return", "BACK")}
-                <span className="w-8 h-px bg-(--color-subtle) group-hover:w-12 group-hover:bg-(--color-fg) transition-all duration-300" />
-              </button>
-            </div>
+      <div
+        className={`flex-1 flex flex-col justify-between transition-all duration-300 relative z-10 ${
+          isSidebarCollapsed ? "lg:pl-20" : "lg:pl-72 xl:pl-80"
+        } pb-24 lg:pb-0`}
+      >
+        <main className="flex-1 px-4 sm:px-8 md:px-12 lg:px-14 xl:px-18 max-w-6xl w-full mx-auto flex flex-col justify-center">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeSection}
+              initial={{ opacity: 0, y: 16, filter: "blur(4px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, y: -16, filter: "blur(4px)" }}
+              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              className="w-full"
+            >
+              {renderActiveSection()}
+            </motion.div>
+          </AnimatePresence>
+        </main>
 
-            <h1 className="text-headline text-(--color-fg) mb-12 md:mb-16">
-              {t(sectionTitleKeys[activeTab as Exclude<TabType, "overview">])}
-            </h1>
-            {activeTab === "projects" && <ProjectsSection />}
-            {activeTab === "experience" && <ExperienceSection />}
-            {activeTab === "skills" && <SkillsSection />}
-            {activeTab === "education" && <EducationSection />}
-          </div>
-        )}
-      </main>
+        <Footer />
+      </div>
 
-      <Footer />
+      <div className="hidden lg:flex fixed bottom-6 right-8 z-30 items-center gap-2 p-1.5 rounded-2xl border border-(--color-border) bg-(--color-surface)/90 backdrop-blur-md shadow-lg">
+        <button
+          onClick={goToPrevSection}
+          disabled={!prevSection}
+          className={`p-2 rounded-xl text-xs font-mono transition-colors flex items-center gap-1.5 ${
+            prevSection
+              ? "text-(--color-muted) hover:text-(--color-fg) hover:bg-(--color-surface-raised) cursor-pointer"
+              : "opacity-30 cursor-not-allowed text-(--color-muted)"
+          }`}
+          title={prevSection ? `Prev: ${prevSection.label}` : undefined}
+          aria-label="Previous section"
+        >
+          <ChevronUp className="w-4 h-4" />
+        </button>
+
+        <div className="flex items-center gap-1.5 px-2">
+          {sections.map((sec) => (
+            <button
+              key={sec.id}
+              onClick={() => handleNavigateSection(sec.id)}
+              className={`transition-all rounded-full cursor-pointer ${
+                activeSection === sec.id
+                  ? "w-6 h-2 bg-(--color-fg)"
+                  : "w-2 h-2 bg-(--color-border) hover:bg-(--color-muted)"
+              }`}
+              title={sec.label}
+              aria-label={`Go to ${sec.label}`}
+            />
+          ))}
+        </div>
+
+        <button
+          onClick={goToNextSection}
+          disabled={!nextSection}
+          className={`p-2 rounded-xl text-xs font-mono transition-colors flex items-center gap-1.5 ${
+            nextSection
+              ? "text-(--color-muted) hover:text-(--color-fg) hover:bg-(--color-surface-raised) cursor-pointer"
+              : "opacity-30 cursor-not-allowed text-(--color-muted)"
+          }`}
+          title={nextSection ? `Next: ${nextSection.label}` : undefined}
+          aria-label="Next section"
+        >
+          <ChevronDown className="w-4 h-4" />
+        </button>
+      </div>
+
+      <BottomNavbar
+        activeSection={activeSection}
+        onNavigateSection={handleNavigateSection}
+      />
     </div>
   );
 }

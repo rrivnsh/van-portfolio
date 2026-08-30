@@ -1,72 +1,150 @@
 {
   "overview": {
     "welcome": "Selamat Datang",
-    "intro": "Lulusan S1 Teknik Informatika berpengalaman dalam pengembangan web dan IT Support.",
-    "projects_desc": "Proyek pilihan yang telah dibangun",
-    "journey_desc": "Pengalaman kerja dan peran profesional",
-    "skills_desc": "Teknologi dan keahlian",
+    "intro": "Lulusan Teknik Informatika dengan pengalaman dalam pengembangan web modern, REST API, dan deployment cloud.",
+    "projects_desc": "Proyek dan sistem yang pernah saya kembangkan",
+    "journey_desc": "Pengalaman kerja dan rekam jejak profesional",
+    "skills_desc": "Teknologi dan keterampilan teknis",
     "foundations_desc": "Latar belakang pendidikan",
-    "nav_projects": "Projects",
-    "nav_journey": "Journey",
-    "nav_skills": "Skills",
-    "nav_foundations": "Foundations",
-    "stat_projects": "Proyek",
-    "stat_experiences": "Pengalaman",
-    "stat_skills": "Area Keahlian"
+    "nav_projects": "Proyek",
+    "nav_journey": "Pengalaman",
+    "nav_skills": "Keahlian",
+    "nav_foundations": "Pendidikan"
   },
 
-  "editorial": {
-    "available": "Terbuka untuk kesempatan kerja",
-    "statement": "Mengubah masalah kompleks menjadi solusi digital yang rapi dan terstruktur.",
-    "contact": "Hubungi saya",
-    "return": "Kembali",
-    "projects_intro": "Proyek pilihan yang menunjukkan kemampuan pemecahan masalah dan eksekusi teknis.",
-    "journey_intro": "Pengalaman kerja dan peran profesional.",
-    "foundations_intro": "Pendidikan formal dan latar belakang akademik.",
-    "skills_intro": "Toolkit teknis dalam pengembangan web dan IT support."
+  "hero": {
+    "available": "Terbuka untuk peluang kerja",
+    "greeting": "Halo, saya",
+    "headline": "Mengubah masalah kompleks menjadi solusi digital yang rapi, efisien, dan terstruktur.",
+    "statement": "Web developer & tech generalist dengan fokus pada antarmuka web modern, REST API backend, dan deployment infrastruktur cloud.",
+    "specialization": "Berpengalaman dengan Vue.js, React, Laravel, Node.js, dan Google Cloud Platform.",
+    "cta_work": "Lihat Proyek",
+    "cta_contact": "Hubungi Saya",
+    "cta_cv": "Unduh CV",
+    "location": "Bandung, Indonesia",
+    "proof_bangkit": "Best Capstone Product (Bangkit Academy 2024)",
+    "proof_focus": "Frontend, Cloud Backend, & IT Support"
+  },
+
+  "projects": {
+    "label": "PROYEK",
+    "heading": "Proyek Terpilih",
+    "prev_slide": "Sebelumnya",
+    "next_slide": "Berikutnya",
+    "explore": "Kunjungi Website",
+    "details": "Detail Proyek",
+    "role_label": "Peran",
+    "year_label": "Tahun",
+    "slide_count": "Proyek",
+    "intro": "Koleksi proyek website, backend API, dan aplikasi yang pernah saya kerjakan."
+  },
+
+  "project_detail": {
+    "overview": "Ringkasan",
+    "contribution": "Kontribusi Saya",
+    "technologies": "Teknologi",
+    "context": "Latar Belakang",
+    "outcome": "Hasil",
+    "live": "Kunjungi Website",
+    "repository": "Repositori GitHub",
+    "close": "Tutup",
+    "zoom": "Klik untuk perbesar",
+    "zoom_in": "Perbesar",
+    "zoom_out": "Perkecil",
+    "reset": "Reset",
+    "close_zoom": "Tutup zoom",
+    "role_label": "Peran",
+    "next_project": "Proyek Berikutnya"
+  },
+
+  "journey": {
+    "label": "PENGALAMAN",
+    "heading": "Pengalaman Kerja",
+    "intro": "Rekam jejak pengalaman kerja di bidang pengembangan web, pelatihan cloud, dan operasional IT."
+  },
+
+  "skills_section": {
+    "label": "KETERAMPILAN TEKNIS",
+    "heading": "Keahlian & Teknologi",
+    "intro": "Teknologi dan tools yang saya gunakan dalam pengembangan web, cloud computing, dan dukungan teknis IT."
+  },
+
+  "education": {
+    "label": "PENDIDIKAN",
+    "heading": "Pendidikan & Penghargaan",
+    "intro": "Pendidikan formal dan program pelatihan teknis yang telah saya selesaikan."
+  },
+
+  "contact": {
+    "label": "KONTAK",
+    "heading_line1": "Mari berdiskusi.",
+    "heading_line2": "Hubungi saya secara langsung.",
+    "email_cta": "Kirim Email",
+    "cv_cta": "Unduh CV",
+    "available": "Terbuka untuk posisi full-time dan proyek kolaborasi"
+  },
+
+  "nav": {
+    "overview": "Ringkasan",
+    "work": "Proyek",
+    "journey": "Pengalaman",
+    "skills": "Keahlian",
+    "foundations": "Pendidikan",
+    "contact": "Kontak"
+  },
+
+  "sidebar": {
+    "subtitle": "Web & Cloud Developer"
   },
 
   "data": {
-    "tavio_desc": "Platform Link-in-Bio Commerce untuk Kreator dan Bisnis.",
-    "tavio_full_desc": "Mengembangkan frontend Tavio.id (React.js, Laravel, Inertia.js) versi 1 yang saat ini telah tersedia di production, mengimplementasikan fitur CRUD sederhana, serta memberikan masukan kebutuhan bisnis & arsitektur v2.",
+    "tavio_desc": "Platform link-in-bio commerce untuk kreator konten dan bisnis digital.",
+    "tavio_full_desc": "Mengembangkan antarmuka frontend Tavio.id versi 1 menggunakan React.js, Laravel, dan Inertia.js yang saat ini sudah berjalan di production. Mengerjakan fitur manajemen tautan, katalog produk, serta memberikan masukan untuk pengembangan versi 2.",
+    "tavio_contribution": "Membangun seluruh tampilan frontend versi 1, mengintegrasikan frontend dengan API backend, dan membantu perancangan kebutuhan teknis versi 2.",
 
-    "sixsafe_desc": "Platform Pelatihan Cybersecurity Awareness.",
-    "sixsafe_full_desc": "Mengimplementasikan UI landing page, dashboard admin, dan dashboard user menggunakan Laravel Blade Templates serta memberikan masukan UI berdasarkan alur pelatihan.",
+    "sixsafe_desc": "Platform pelatihan kesadaran keamanan siber (cybersecurity awareness).",
+    "sixsafe_full_desc": "Mengimplementasikan halaman landing page, dashboard admin, dan dashboard peserta pelatihan menggunakan template Laravel Blade. Memberikan saran perbaikan antarmuka selama pengujian fitur.",
+    "sixsafe_contribution": "Membangun antarmuka landing page dan dashboard yang responsif dan mudah digunakan oleh peserta pelatihan.",
 
-    "babygrowth_desc": "Aplikasi Pemantauan Tumbuh Kembang Anak (Bangkit Academy 2024).",
-    "babygrowth_full_desc": "Mengembangkan REST API (Node.js, JWT) untuk mendukung fitur prediksi makanan tumbuh kembang anak, serta deployment backend ke Google Compute Engine & Cloud Storage. Peraih Best Capstone Product.",
+    "babygrowth_desc": "Aplikasi pemantauan tumbuh kembang anak pada program Bangkit Academy 2024.",
+    "babygrowth_full_desc": "Mengembangkan REST API menggunakan Node.js dan autentikasi JWT untuk fitur rekomendasi makanan anak, serta melakukan deployment ke Google Compute Engine dan Cloud Storage. Berhasil meraih penghargaan Best Capstone Product dari 200+ tim.",
+    "babygrowth_contribution": "Membuat endpoint REST API backend, mengelola autentikasi JWT, dan melakukan konfigurasi deployment di Google Cloud Platform.",
 
-    "apotek_desc": "Sistem digital manajemen operasional apotek.",
-    "apotek_full_desc": "Berperan sebagai Project Lead mengkoordinasikan integrasi frontend-backend serta antarmuka web responsif manajemen inventaris & penjualan.",
+    "apotek_desc": "Sistem informasi manajemen stok dan penjualan apotek.",
+    "apotek_full_desc": "Berperan sebagai koordinator tim proyek dan mengembangkan antarmuka web responsif untuk pencatatan inventaris obat dan transaksi penjualan.",
+    "apotek_contribution": "Mengkoordinasikan tim dan mengimplementasikan tampilan web manajemen stok serta rekap penjualan.",
 
-    "ewastepas_desc": "Progressive Web App pengelolaan sampah elektronik.",
-    "ewastepas_full_desc": "Aplikasi web PWA pengumpulan sampah elektronik berbasis React dan Tailwind CSS dengan alur penjemputan dinamis.",
+    "ewastepas_desc": "Progressive Web App untuk layanan penjemputan sampah elektronik.",
+    "ewastepas_full_desc": "Aplikasi web responsif untuk pengelolaan dan penjadwalan penjemputan sampah elektronik berbasis React dan Tailwind CSS.",
+    "ewastepas_contribution": "Membuat formulir permohonan penjemputan sampah dan halaman jadwal yang responsif.",
 
     "exp_dremaxtion_role": "Frontend Developer Intern",
-    "exp_dremaxtion_company": "PT Dremaxtion Indonesia",
-    "exp_dremaxtion_desc": "Mengimplementasikan 3 landing page & fitur Dashboard/Links (authentication, modal, dropdown, context menu, multi-select, form validation) berbasis Vue.js, TypeScript, Tailwind CSS, Laravel, & Inertia.js hingga direview oleh Lead FE.",
+    "exp_dremaxtion_company": "PT Dremaxtion Teknologi Internasional",
+    "exp_dremaxtion_desc": "Mengimplementasikan 3 halaman landing page dari desain Figma menggunakan Vue.js, TypeScript, Tailwind CSS, Laravel, dan Inertia.js. Mengerjakan fitur Dashboard Links mencakup authentication, modal, dropdown, dan form validation, serta membuat reusable component.",
+    "exp_dremaxtion_period": "Jun 2026 - Sekarang",
 
-    "exp_gdc_role": "Curriculum Developer – Cloud Computing",
+    "exp_gdc_role": "Curriculum Developer, Cloud Computing",
     "exp_gdc_company": "Google Developer on Campus Universitas Pasundan",
-    "exp_gdc_desc": "Menyusun 2 modul pengenalan Cloud Computing & setup Virtual Machine di GCP serta memandu sesi praktik langsung deployment VM.",
+    "exp_gdc_desc": "Menyusun 2 modul pembelajaran pengenalan Cloud Computing dan konfigurasi Virtual Machine menggunakan Google Cloud Platform, serta memandu sesi praktik deployment langsung bagi mahasiswa.",
+    "exp_gdc_period": "Okt 2024 - Sep 2025",
 
     "exp_bangkit_role": "Cloud Computing Cohort",
-    "exp_bangkit_company": "Bangkit Academy 2024",
-    "exp_bangkit_desc": "Mengembangkan REST API (Node.js) & deployment backend Google Compute Engine untuk aplikasi BabyGrowth (Best Capstone Product dari 200+ tim).",
+    "exp_bangkit_company": "Bangkit Academy led by Google, GoTo, & Traveloka",
+    "exp_bangkit_desc": "Mengembangkan REST API menggunakan Node.js dan melakukan deployment backend di Google Compute Engine untuk aplikasi BabyGrowth. Berhasil meraih penghargaan Best Capstone Product dari 200+ tim.",
+    "exp_bangkit_period": "Feb 2024 - Jul 2024",
 
     "exp_smk_role": "Staff Administrasi & IT Support",
     "exp_smk_company": "SMK Angkasa Lanud Husein Sastranegara Bandung",
-    "exp_smk_desc": "Mengelola dokumen & data administrasi Excel, troubleshooting koneksi Wi-Fi/hardware, instalasi software PC, serta konfigurasi jaringan printer.",
+    "exp_smk_desc": "Mengelola data administrasi Tata Usaha menggunakan Microsoft Excel, menangani troubleshooting koneksi Wi-Fi dan instalasi software PC, serta menghubungkan printer bersama untuk beberapa komputer.",
+    "exp_smk_period": "Agt 2020 - Jul 2021",
 
     "edu_unpas_name": "Universitas Pasundan",
-    "edu_unpas_degree": "Sarjana Teknik Informatika | IPK 3.63 / 4.00",
-    "edu_unpas_gpa": "IPK: 3.63 / 4.00",
-    "edu_unpas_period": "2021 – 2025",
+    "edu_unpas_degree": "Sarjana Teknik Informatika",
+    "edu_unpas_period": "2021 - 2025",
 
-    "skills.frontend": "Frontend Development",
-    "skills.backend": "Backend Development",
-    "skills.database_cloud": "Database & Cloud",
-    "skills.itsupport": "IT Support & Administration",
-    "skills.tools": "Tools & Development"
+    "skills.build": "Pengembangan Frontend",
+    "skills.data_apis": "Backend & API",
+    "skills.cloud_devops": "Cloud & Infrastruktur",
+    "skills.tools_support": "Operasional IT & Tools"
   }
 }

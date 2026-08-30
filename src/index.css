@@ -1,33 +1,59 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Color palette — single source of truth */
+/* ──────────────────────────────────────────────
+   Design Tokens : Full Monochrome Premium
+   ────────────────────────────────────────────── */
+
 :root[data-theme="light"] {
-  --color-bg: #ffffff;
+  --color-bg: #fcfcfc;
+  --color-surface: #ffffff;
+  --color-surface-raised: #f4f4f5;
   --color-fg: #0a0a0a;
-  --color-muted: #525252;
-  --color-subtle: #a3a3a3;
-  --color-border: #e5e5e5;
+  --color-muted: #52525b;
+  --color-subtle: #a1a1aa;
+  --color-border: #e4e4e7;
+  --color-border-subtle: #f4f4f5;
+  --color-accent: #0a0a0a;
+  --color-accent-hover: #27272a;
+  --color-accent-soft: rgba(0, 0, 0, 0.05);
+  --color-accent-contrast: #ffffff;
+  --color-card-border: rgba(0, 0, 0, 0.08);
 }
 
 :root[data-theme="dark"] {
-  --color-bg: #0a0a0a;
-  --color-fg: #fafafa;
-  --color-muted: #a3a3a3;
-  --color-subtle: #525252;
-  --color-border: #262626;
+  --color-bg: #080808;
+  --color-surface: #111111;
+  --color-surface-raised: #181818;
+  --color-fg: #ffffff;
+  --color-muted: #a1a1aa;
+  --color-subtle: #616161;
+  --color-border: #222222;
+  --color-border-subtle: #181818;
+  --color-accent: #ffffff;
+  --color-accent-hover: #e0e0e0;
+  --color-accent-soft: rgba(255, 255, 255, 0.08);
+  --color-accent-contrast: #000000;
+  --color-card-border: rgba(255, 255, 255, 0.08);
 }
 
 :root {
   color-scheme: light dark;
 }
 
-/* Base styles */
+/* ──────────────────────────────────────────────
+   Base Styles
+   ────────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body,
 #root {
@@ -38,86 +64,146 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.65;
   background-color: var(--color-bg);
   color: var(--color-fg);
   transition:
-    background-color 0.3s ease,
-    color 0.3s ease;
+    background-color 0.2s ease,
+    color 0.2s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Typography Scale */
+/* Body scroll lock for modals */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* ──────────────────────────────────────────────
+   Typography Scale : Architectural & Clean
+   ────────────────────────────────────────────── */
+
 h1, h2, h3, h4 {
   text-wrap: balance;
+  color: var(--color-fg);
 }
 
-/* Display — Hero headlines */
+/* Display : Hero main heading */
 .text-display {
-  font-size: clamp(3.5rem, 14vw, 11rem);
-  line-height: 0.88;
-  letter-spacing: -0.035em;
-  font-weight: 900;
-  text-transform: uppercase;
-  text-wrap: balance;
-}
-
-/* Headline — Section titles */
-.text-headline {
-  font-size: clamp(3rem, 9vw, 6.5rem);
-  line-height: 0.95;
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  line-height: 1.15;
   letter-spacing: -0.03em;
-  font-weight: 900;
-  text-transform: uppercase;
+  font-weight: 700;
   text-wrap: balance;
 }
 
-/* Title — Subsection headers */
-.text-title {
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
-  line-height: 1.1;
+/* Headline : Section titles */
+.text-headline {
+  font-size: clamp(1.6rem, 2.5vw, 2.25rem);
+  line-height: 1.25;
   letter-spacing: -0.02em;
-  font-weight: 700;
+  font-weight: 600;
   text-wrap: balance;
 }
 
-/* Body — Paragraph text */
+/* Title : Subsection headers */
+.text-title {
+  font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+/* Body : Paragraph text */
 .text-body {
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
-  line-height: 1.618;
+  font-size: clamp(0.95rem, 1vw, 1.05rem);
+  line-height: 1.7;
   font-weight: 400;
-  letter-spacing: -0.01em;
+  color: var(--color-muted);
   text-wrap: pretty;
-  max-width: 70ch;
 }
 
-/* Label — UI elements, metadata */
-.text-label {
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-/* Caption — Small contextual text */
+/* Caption : Small metadata badges */
 .text-caption {
-  font-size: 0.65rem;
-  letter-spacing: 0.25em;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 600;
 }
 
-/* Accessibility Focus States */
+/* ──────────────────────────────────────────────
+   Accessibility Focus States
+   ────────────────────────────────────────────── */
+
 a:focus-visible,
-button:focus-visible {
-  outline: 2px solid var(--color-fg);
-  outline-offset: 4px;
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
 
-/* Motion Accessibility */
+/* ──────────────────────────────────────────────
+   Custom Scrollbars
+   ────────────────────────────────────────────── */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* ──────────────────────────────────────────────
+   Swiper Custom Minimalist Pagination
+   ────────────────────────────────────────────── */
+
+.swiper-pagination {
+  position: static !important;
+  margin-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.swiper-pagination-bullet {
+  width: 8px !important;
+  height: 8px !important;
+  background: var(--color-muted) !important;
+  opacity: 0.35 !important;
+  border-radius: 9999px !important;
+  transition: all 0.3s ease !important;
+  cursor: pointer !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 24px !important;
+  background: var(--color-fg) !important;
+  opacity: 1 !important;
+}
+
+/* ──────────────────────────────────────────────
+   Motion Accessibility
+   ────────────────────────────────────────────── */
+
 @media (prefers-reduced-motion: reduce) {
-  *, ::before, ::after {
+  *,
+  ::before,
+  ::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
