@@ -24,8 +24,8 @@ export const OverviewSection = ({ onNavigateSection }: OverviewSectionProps) => 
   };
 
   return (
-    <div className="min-h-[75vh] flex flex-col justify-center py-8 sm:py-12 md:py-16 w-full">
-      <div className="w-full space-y-8 max-w-4xl">
+    <div className="min-h-0 lg:min-h-[75vh] flex flex-col justify-center py-4 sm:py-8 md:py-12 w-full">
+      <div className="w-full space-y-6 sm:space-y-8 max-w-4xl">
         <div className="flex flex-wrap items-center gap-3 text-xs">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-(--color-border) bg-(--color-surface) text-(--color-fg) font-medium">
             <span className="w-2 h-2 rounded-full bg-(--color-fg)" aria-hidden="true" />

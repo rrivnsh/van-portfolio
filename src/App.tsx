@@ -62,9 +62,9 @@ function App() {
       <div
         className={`flex-1 flex flex-col justify-between transition-all duration-300 relative z-10 ${
           isSidebarCollapsed ? "lg:pl-20" : "lg:pl-72 xl:pl-80"
-        } pb-24 lg:pb-0`}
+        } pt-16 sm:pt-20 lg:pt-0 pb-20 lg:pb-0`}
       >
-        <main className="flex-1 px-4 sm:px-8 md:px-12 lg:px-14 xl:px-18 max-w-6xl w-full mx-auto flex flex-col justify-center">
+        <main className="flex-1 px-4 sm:px-8 md:px-12 lg:px-14 xl:px-18 max-w-6xl w-full mx-auto flex flex-col justify-center py-4 lg:py-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeSection}

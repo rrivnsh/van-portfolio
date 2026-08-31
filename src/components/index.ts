@@ -1,10 +1,7 @@
 export { ProjectDetailModal } from "./ProjectDetailModal";
-export { SectionLayout } from "./SectionLayout";
 export { Loading } from "./Loading";
-export { Header } from "./Header";
 export { Sidebar } from "./Sidebar";
 export { Footer } from "./Footer";
-export { BackgroundGrid } from "./BackgroundGrid";
 export { InteractiveBackground } from "./InteractiveBackground";
 export { SpotlightCard } from "./SpotlightCard";
 export { BottomNavbar } from "./BottomNavbar";

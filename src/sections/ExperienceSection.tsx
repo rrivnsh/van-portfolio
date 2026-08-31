@@ -38,9 +38,8 @@ export const ExperienceSection = () => {
   }, [selectedIndex]);
 
   return (
-    <div className="min-h-[82vh] flex flex-col justify-center py-6 sm:py-8 md:py-10 w-full space-y-6">
-      {/* Clean Header with Stepper Controls */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b border-(--color-border) pb-4">
+    <div className="min-h-0 lg:min-h-[75vh] flex flex-col justify-center py-4 sm:py-6 md:py-8 w-full space-y-4 sm:space-y-6">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 border-b border-(--color-border) pb-3">
         <div className="space-y-1">
           <div className="inline-flex items-center gap-2 text-caption text-(--color-muted) font-mono">
             <Briefcase className="w-3.5 h-3.5 text-(--color-fg)" aria-hidden="true" />
@@ -51,7 +50,6 @@ export const ExperienceSection = () => {
           </h2>
         </div>
 
-        {/* Minimalist Slider Stepper Controls */}
         <div className="flex items-center gap-3">
           <span className="text-xs font-mono text-(--color-muted)">
             <strong className="text-(--color-fg)">{String(selectedIndex + 1).padStart(2, "0")}</strong>
@@ -79,8 +77,7 @@ export const ExperienceSection = () => {
         </div>
       </div>
 
-      {/* Large Premium Executive Career Milestone Card */}
-      <SpotlightCard className="p-8 sm:p-10 md:p-12 rounded-3xl border border-(--color-border) bg-(--color-surface) shadow-xs">
+      <SpotlightCard className="p-5 sm:p-8 md:p-10 rounded-3xl border border-(--color-border) bg-(--color-surface) shadow-xs">
         <AnimatePresence mode="wait">
           <motion.div
             key={selectedExp.id}
@@ -88,11 +85,10 @@ export const ExperienceSection = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-start"
+            className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start"
           >
-            {/* Left Column: Role, Company, Period */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="space-y-3">
+            <div className="lg:col-span-5 space-y-4 sm:space-y-6">
+              <div className="space-y-2 sm:space-y-3">
                 <div className="flex items-center gap-2 text-xs font-mono text-(--color-muted)">
                   <span className="text-(--color-fg) font-semibold">
                     Milestone {String(selectedIndex + 1).padStart(2, "0")} / {String(experienceData.length).padStart(2, "0")}
@@ -117,18 +113,16 @@ export const ExperienceSection = () => {
               </div>
             </div>
 
-            {/* Right Column: Key Deliverables & Tech Tags */}
-            <div className="lg:col-span-7 space-y-6 border-t lg:border-t-0 lg:border-l border-(--color-border) pt-6 lg:pt-0 lg:pl-10">
-              <div className="space-y-3">
+            <div className="lg:col-span-7 space-y-5 border-t lg:border-t-0 lg:border-l border-(--color-border) pt-5 lg:pt-0 lg:pl-8">
+              <div className="space-y-2 sm:space-y-3">
                 <span className="text-xs font-mono uppercase tracking-wider text-(--color-muted) block">
                   Responsibilities & Key Impact
                 </span>
-                <p className="text-body text-base leading-relaxed text-(--color-muted)">
+                <p className="text-body text-sm sm:text-base leading-relaxed text-(--color-muted)">
                   {t(selectedExp.desc)}
                 </p>
               </div>
 
-              {/* Technologies */}
               {selectedExp.tech && selectedExp.tech.length > 0 && (
                 <div className="space-y-2.5 pt-2">
                   <span className="text-[11px] font-mono uppercase tracking-wider text-(--color-muted) block">

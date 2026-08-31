@@ -1,6 +1,3 @@
-// Skills Data
-// Categorized capabilities and expertise areas for the versatile generalist profile
-
 export interface SkillCategory {
   id: number;
   category: string;

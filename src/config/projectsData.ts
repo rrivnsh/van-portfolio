@@ -1,5 +1,3 @@
-// Projects Data
-// Portfolio project information displayed in the ProjectsSection
 import * as ProjectImages from "@/assets/projects/index";
 
 export interface ProjectData {

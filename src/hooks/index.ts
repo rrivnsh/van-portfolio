@@ -1,2 +1,2 @@
 export { useJakartaTime } from "./useJakartaTime";
-export { useScrollReveal } from "./useScrollReveal";
+export { useSectionNavigation } from "./useSectionNavigation";

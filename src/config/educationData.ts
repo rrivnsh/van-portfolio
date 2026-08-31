@@ -1,4 +1,3 @@
-// Education Data
 export interface EducationItem {
   id: number;
   institution: string;

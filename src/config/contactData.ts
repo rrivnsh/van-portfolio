@@ -1,4 +1,3 @@
-// Personal contact information and social media links
 export const contactData = {
   name: "Muhamad Rivan Sahronie",
   email: "muhamadrivansahronie@gmail.com",

@@ -107,13 +107,13 @@ export const useSectionNavigation = () => {
 
       if (isThrottled.current) return;
 
-      if (diffY > 60 && (!isScrollable || isAtBottom)) {
+      if (diffY > 90 && (!isScrollable || isAtBottom)) {
         isThrottled.current = true;
         goToNextSection();
         setTimeout(() => {
           isThrottled.current = false;
         }, 750);
-      } else if (diffY < -60 && (!isScrollable || isAtTop)) {
+      } else if (diffY < -90 && (!isScrollable || isAtTop)) {
         isThrottled.current = true;
         goToPrevSection();
         setTimeout(() => {

@@ -1,7 +1,5 @@
 import { Github, Linkedin, PhoneCall } from "lucide-react";
 import { contactData } from "./contactData";
-
-// social links data for UI components
 export const socialLinks = [
   {
     href: contactData.github,

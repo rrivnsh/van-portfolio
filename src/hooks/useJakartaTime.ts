@@ -17,7 +17,8 @@ export function useJakartaTime(): string {
       );
     };
     updateTime();
-    const interval = setInterval(updateTime, 1000);
+    // ponytail: 10s interval is accurate for minute display without 60 renders/min
+    const interval = setInterval(updateTime, 10000);
     return () => clearInterval(interval);
   }, []);
 

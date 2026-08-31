@@ -23,10 +23,9 @@ export const ContactSection = () => {
   };
 
   return (
-    <div className="min-h-[75vh] flex flex-col justify-center items-center text-center py-8 sm:py-12 md:py-16 w-full">
-      <div className="max-w-2xl w-full space-y-8 flex flex-col items-center">
-        {/* Section Header (Centered) */}
-        <div className="space-y-3 flex flex-col items-center">
+    <div className="min-h-0 lg:min-h-[75vh] flex flex-col justify-center items-center text-center py-4 sm:py-8 md:py-12 w-full">
+      <div className="max-w-2xl w-full space-y-6 sm:space-y-8 flex flex-col items-center">
+        <div className="space-y-2 sm:space-y-3 flex flex-col items-center">
           <div className="inline-flex items-center gap-2 text-caption text-(--color-muted) font-mono">
             <MessageSquare className="w-3.5 h-3.5 text-(--color-fg)" aria-hidden="true" />
             <span>{t("contact.label", "KONTAK")}</span>
@@ -36,21 +35,20 @@ export const ContactSection = () => {
             {t("contact.heading_line1", "Mari berdiskusi.")}
           </h2>
 
-          <p className="text-body text-base md:text-lg text-(--color-muted) max-w-lg">
+          <p className="text-body text-sm sm:text-base md:text-lg text-(--color-muted) max-w-lg">
             {t("contact.available", "Terbuka untuk posisi full-time dan proyek kolaborasi.")}
           </p>
         </div>
 
-        {/* Minimalist Email Pill Card (Centered) */}
-        <div className="w-full p-6 sm:p-8 rounded-2xl border border-(--color-border) bg-(--color-surface) space-y-6 flex flex-col items-center shadow-xs">
+        <div className="w-full p-4 sm:p-8 rounded-2xl border border-(--color-border) bg-(--color-surface) space-y-5 sm:space-y-6 flex flex-col items-center shadow-xs">
           <span className="text-xs font-mono text-(--color-muted) uppercase tracking-wider">
             Direct Email Address
           </span>
 
-          <div className="flex flex-wrap items-center justify-center gap-3">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 max-w-full">
             <a
               href={`mailto:${contactData.email}`}
-              className="text-lg sm:text-2xl font-mono font-bold text-(--color-fg) hover:underline transition-all"
+              className="text-sm sm:text-xl md:text-2xl font-mono font-bold text-(--color-fg) hover:underline transition-all break-all"
             >
               {contactData.email}
             </a>
@@ -69,7 +67,6 @@ export const ContactSection = () => {
             </button>
           </div>
 
-          {/* Action CTAs Centered */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <a
               href={`mailto:${contactData.email}`}
@@ -90,7 +87,6 @@ export const ContactSection = () => {
           </div>
         </div>
 
-        {/* Social Links Row Centered */}
         <div className="flex flex-wrap items-center justify-center gap-6 pt-2">
           {socialLinks.map((link) => (
             <a

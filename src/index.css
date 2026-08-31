@@ -6,10 +6,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* ──────────────────────────────────────────────
-   Design Tokens : Full Monochrome Premium
-   ────────────────────────────────────────────── */
-
+/* Theme tokens */
 :root[data-theme="light"] {
   --color-bg: #fcfcfc;
   --color-surface: #ffffff;
@@ -46,10 +43,6 @@
   color-scheme: light dark;
 }
 
-/* ──────────────────────────────────────────────
-   Base Styles
-   ────────────────────────────────────────────── */
-
 html {
   scroll-behavior: smooth;
 }
@@ -74,21 +67,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Body scroll lock for modals */
 body.modal-open {
   overflow: hidden;
 }
 
-/* ──────────────────────────────────────────────
-   Typography Scale : Architectural & Clean
-   ────────────────────────────────────────────── */
-
+/* Typography Scale */
 h1, h2, h3, h4 {
   text-wrap: balance;
   color: var(--color-fg);
 }
 
-/* Display : Hero main heading */
 .text-display {
   font-size: clamp(2.2rem, 4.5vw, 3.8rem);
   line-height: 1.15;
@@ -97,7 +85,6 @@ h1, h2, h3, h4 {
   text-wrap: balance;
 }
 
-/* Headline : Section titles */
 .text-headline {
   font-size: clamp(1.6rem, 2.5vw, 2.25rem);
   line-height: 1.25;
@@ -106,7 +93,6 @@ h1, h2, h3, h4 {
   text-wrap: balance;
 }
 
-/* Title : Subsection headers */
 .text-title {
   font-size: clamp(1.1rem, 1.5vw, 1.35rem);
   line-height: 1.35;
@@ -115,7 +101,6 @@ h1, h2, h3, h4 {
   text-wrap: balance;
 }
 
-/* Body : Paragraph text */
 .text-body {
   font-size: clamp(0.95rem, 1vw, 1.05rem);
   line-height: 1.7;
@@ -124,7 +109,6 @@ h1, h2, h3, h4 {
   text-wrap: pretty;
 }
 
-/* Caption : Small metadata badges */
 .text-caption {
   font-size: 0.75rem;
   letter-spacing: 0.1em;
@@ -132,10 +116,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
-/* ──────────────────────────────────────────────
-   Accessibility Focus States
-   ────────────────────────────────────────────── */
-
+/* Focus and scrollbars */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -144,10 +125,6 @@ textarea:focus-visible {
   outline-offset: 3px;
   border-radius: 6px;
 }
-
-/* ──────────────────────────────────────────────
-   Custom Scrollbars
-   ────────────────────────────────────────────── */
 
 ::-webkit-scrollbar {
   width: 6px;
@@ -165,35 +142,6 @@ textarea:focus-visible {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-muted);
-}
-
-/* ──────────────────────────────────────────────
-   Swiper Custom Minimalist Pagination
-   ────────────────────────────────────────────── */
-
-.swiper-pagination {
-  position: static !important;
-  margin-top: 1.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.swiper-pagination-bullet {
-  width: 8px !important;
-  height: 8px !important;
-  background: var(--color-muted) !important;
-  opacity: 0.35 !important;
-  border-radius: 9999px !important;
-  transition: all 0.3s ease !important;
-  cursor: pointer !important;
-}
-
-.swiper-pagination-bullet-active {
-  width: 24px !important;
-  background: var(--color-fg) !important;
-  opacity: 1 !important;
 }
 
 /* ──────────────────────────────────────────────

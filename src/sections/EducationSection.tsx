@@ -7,8 +7,7 @@ export const EducationSection = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="min-h-[75vh] flex flex-col justify-center py-8 sm:py-12 md:py-16 w-full space-y-8">
-      {/* Section Header */}
+    <div className="min-h-0 lg:min-h-[75vh] flex flex-col justify-center py-4 sm:py-8 md:py-12 w-full space-y-6 sm:space-y-8">
       <div className="space-y-2 max-w-2xl">
         <div className="inline-flex items-center gap-2 text-caption text-(--color-muted) font-mono">
           <GraduationCap className="w-3.5 h-3.5 text-(--color-fg)" aria-hidden="true" />
@@ -22,22 +21,20 @@ export const EducationSection = () => {
         </p>
       </div>
 
-      {/* Academic Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Unpas Degree */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
         {educationData.map((edu) => (
-          <SpotlightCard key={edu.id} className="p-6 sm:p-7 space-y-4 flex flex-col justify-between h-full">
+          <SpotlightCard key={edu.id} className="p-4 sm:p-6 md:p-7 space-y-4 flex flex-col justify-between h-full">
             <div className="space-y-3">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-2">
                 <span className="text-xs font-mono font-semibold text-(--color-fg) uppercase tracking-wider">
                   {t(edu.institution)}
                 </span>
-                <span className="font-mono text-xs text-(--color-muted)">
+                <span className="font-mono text-xs text-(--color-muted) shrink-0">
                   {t(edu.period)}
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-(--color-fg)">
+              <h3 className="text-lg sm:text-xl font-bold text-(--color-fg)">
                 {t(edu.degree)}
               </h3>
 
@@ -46,7 +43,7 @@ export const EducationSection = () => {
               </p>
             </div>
 
-            <div className="pt-4 border-t border-(--color-border) flex items-center justify-between">
+            <div className="pt-4 border-t border-(--color-border) flex items-center justify-between gap-2">
               <span className="text-xs font-mono text-(--color-muted)">Status</span>
               <span className="font-mono text-xs font-semibold text-(--color-fg) px-3 py-1 rounded-md border border-(--color-border) bg-(--color-surface-raised)">
                 Graduate (S.Kom)
@@ -55,19 +52,18 @@ export const EducationSection = () => {
           </SpotlightCard>
         ))}
 
-        {/* Bangkit Google Capstone */}
-        <SpotlightCard className="p-6 sm:p-7 space-y-4 flex flex-col justify-between h-full">
+        <SpotlightCard className="p-4 sm:p-6 md:p-7 space-y-4 flex flex-col justify-between h-full">
           <div className="space-y-3">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between gap-2">
               <span className="text-xs font-mono font-semibold text-(--color-fg) uppercase tracking-wider">
                 Bangkit Academy (Google, GoTo, Traveloka)
               </span>
-              <span className="font-mono text-xs text-(--color-muted)">
+              <span className="font-mono text-xs text-(--color-muted) shrink-0">
                 Feb 2024 - Jul 2024
               </span>
             </div>
 
-            <h3 className="text-xl font-bold text-(--color-fg)">
+            <h3 className="text-lg sm:text-xl font-bold text-(--color-fg)">
               Cloud Computing Graduate
             </h3>
 
@@ -76,10 +72,10 @@ export const EducationSection = () => {
             </p>
           </div>
 
-          <div className="pt-4 border-t border-(--color-border) flex items-center justify-between">
+          <div className="pt-4 border-t border-(--color-border) flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <span className="text-xs font-mono text-(--color-muted)">Distinction</span>
             <span className="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-(--color-fg) px-3 py-1 rounded-md border border-(--color-border) bg-(--color-surface-raised)">
-              <Award className="w-3.5 h-3.5" aria-hidden="true" />
+              <Award className="w-3.5 h-3.5 shrink-0" aria-hidden="true" />
               <span>Best Capstone (Top of 200+ Teams)</span>
             </span>
           </div>

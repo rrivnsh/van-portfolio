@@ -199,13 +199,11 @@ const ProjectDetailModal = ({
 
   return createPortal(
     <div className="relative z-[9999]">
-      {/* Fullscreen Backdrop */}
       <div
         className="fixed inset-0 bg-black/85 backdrop-blur-md z-[9999]"
         onClick={onClose}
       />
 
-      {/* Modal Viewport Container */}
       <div
         role="dialog"
         aria-modal="true"
@@ -216,8 +214,7 @@ const ProjectDetailModal = ({
           className="relative bg-(--color-surface) text-(--color-fg) w-full max-w-3xl max-h-[88vh] overflow-y-auto pointer-events-auto rounded-3xl shadow-2xl border border-(--color-border)"
           onClick={(e) => e.stopPropagation()}
         >
-          {/* Header Bar */}
-          <div className="sticky top-0 z-20 flex items-center justify-between px-6 sm:px-8 py-4 border-b border-(--color-border) bg-(--color-surface)/95 backdrop-blur-md">
+          <div className="sticky top-0 z-20 flex items-center justify-between px-4 sm:px-8 py-3 sm:py-4 border-b border-(--color-border) bg-(--color-surface)/95 backdrop-blur-md">
             <div className="flex items-center gap-2.5 text-xs font-mono text-(--color-muted)">
               <span className="text-(--color-fg) font-semibold uppercase">{project.category}</span>
               <span className="opacity-40">/</span>
@@ -234,12 +231,11 @@ const ProjectDetailModal = ({
             </button>
           </div>
 
-          <div className="p-6 sm:p-8 md:p-10 space-y-8">
-            {/* Title & Role Info */}
+          <div className="p-4 sm:p-8 md:p-10 space-y-6 sm:space-y-8">
             <div className="space-y-1.5">
               <h2
                 id="modal-title"
-                className="text-2xl sm:text-3xl font-bold tracking-tight text-(--color-fg)"
+                className="text-xl sm:text-3xl font-bold tracking-tight text-(--color-fg)"
               >
                 {project.title}
               </h2>
@@ -251,8 +247,7 @@ const ProjectDetailModal = ({
               )}
             </div>
 
-            {/* Static Clean Image Preview Frame */}
-            <div className="w-full rounded-2xl border border-(--color-border) bg-(--color-surface-raised) overflow-hidden relative flex items-center justify-center p-4 sm:p-6 min-h-[200px] max-h-[45vh]">
+            <div className="w-full rounded-2xl border border-(--color-border) bg-(--color-surface-raised) overflow-hidden relative flex items-center justify-center p-2 sm:p-6 min-h-[160px] max-h-[45vh]">
               <img
                 src={project.image}
                 alt={project.title}
@@ -269,9 +264,7 @@ const ProjectDetailModal = ({
               </button>
             </div>
 
-            {/* Case Study Content */}
             <div className="space-y-6">
-              {/* Overview */}
               <div className="space-y-2">
                 <span className="text-xs font-mono uppercase tracking-wider text-(--color-muted) block">
                   {t("project_detail.overview", "Overview")}
@@ -281,7 +274,6 @@ const ProjectDetailModal = ({
                 </p>
               </div>
 
-              {/* Key Contributions */}
               {contributionText && contributionText.trim() !== "" && (
                 <div className="space-y-2">
                   <span className="text-xs font-mono uppercase tracking-wider text-(--color-muted) block">
@@ -293,7 +285,6 @@ const ProjectDetailModal = ({
                 </div>
               )}
 
-              {/* Technologies */}
               <div className="space-y-2 pt-2">
                 <span className="text-xs font-mono uppercase tracking-wider text-(--color-muted) block">
                   {t("project_detail.technologies", "Technologies")}
@@ -311,7 +302,6 @@ const ProjectDetailModal = ({
               </div>
             </div>
 
-            {/* Action Bar */}
             <div className="pt-6 border-t border-(--color-border) flex flex-wrap items-center justify-between gap-4">
               <div className="flex flex-wrap items-center gap-3">
                 {project.link && (
@@ -349,7 +339,6 @@ const ProjectDetailModal = ({
         </div>
       </div>
 
-      {/* Fullscreen Zoom Overlay */}
       {zoomState.isOpen && (
         <div
           ref={containerRef}
@@ -363,7 +352,6 @@ const ProjectDetailModal = ({
             }
           }}
         >
-          {/* Close Zoom */}
           <button
             onClick={handleCloseZoom}
             className="absolute top-4 right-4 p-3 rounded-full bg-white/10 hover:bg-white/20 text-white z-[10020] cursor-pointer transition-colors focus-visible:outline-2 min-h-[44px] min-w-[44px] flex items-center justify-center"
@@ -372,7 +360,6 @@ const ProjectDetailModal = ({
             <X className="w-6 h-6" aria-hidden="true" />
           </button>
 
-          {/* Zoomable Image */}
           <div className="relative flex items-center justify-center w-full h-full">
             <img
               src={project.image}
@@ -391,7 +378,6 @@ const ProjectDetailModal = ({
             />
           </div>
 
-          {/* Zoom Controls Toolbar */}
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 bg-black/80 text-white px-4 py-2 rounded-lg z-[10020] pointer-events-auto shadow-xl backdrop-blur-sm">
             <button
               onClick={() => handleZoomChange(-0.25)}
