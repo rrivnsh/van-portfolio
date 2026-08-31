@@ -48,7 +48,7 @@ const ProjectDetailModal = ({
   const isPanning = useRef(false);
   const panStart = useRef({ x: 0, y: 0 });
 
-  // Scroll lock, Escape listener, Focus Management
+  // scroll lock, escape listener, focus management
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("modal-open");
@@ -85,7 +85,7 @@ const ProjectDetailModal = ({
   const handleCloseZoom = () =>
     setZoomState((prev) => ({ ...prev, isOpen: false }));
 
-  // Wheel zoom
+  // cursor-centered wheel zoom
   useEffect(() => {
     if (!zoomState.isOpen || !containerRef.current || !project) return;
     const container = containerRef.current;

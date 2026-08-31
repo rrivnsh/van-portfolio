@@ -73,7 +73,6 @@ export const Sidebar = ({
 
   return (
     <>
-      {/* Mobile/Tablet Header: Brand + Lang + Theme (Nav handled by BottomNavbar) */}
       <header className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-(--color-bg)/95 backdrop-blur-md border-b border-(--color-border) px-4 sm:px-6 h-16 flex items-center justify-between">
         <button
           onClick={() => handleNavClick("hero")}

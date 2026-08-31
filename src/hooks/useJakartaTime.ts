@@ -17,7 +17,7 @@ export function useJakartaTime(): string {
       );
     };
     updateTime();
-    // ponytail: 10s interval is accurate for minute display without 60 renders/min
+    // 10s polling interval is sufficient for minute-level clock updates
     const interval = setInterval(updateTime, 10000);
     return () => clearInterval(interval);
   }, []);

@@ -28,7 +28,7 @@ export const ProjectsSection = () => {
     setSelectedIndex((prev) => (prev < projectsData.length - 1 ? prev + 1 : 0));
   };
 
-  // Keyboard left/right arrow navigation
+  // keyboard arrow navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (document.body.classList.contains("modal-open")) return;

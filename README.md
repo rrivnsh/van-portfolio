@@ -1,62 +1,29 @@
-# Muhamad Rivan Sahronie — Portfolio (rivan.me)
+# Muhamad Rivan Sahronie — Portfolio
 
-High-performance, editorial portfolio with a single-screen zero-scroll canvas, dynamic interactive monochrome background, and multi-language support.
+Personal portfolio website showcasing web development projects, work experience, and technical skills.
 
----
+Live site: [rivan.me](https://rivan.me)
 
-## 🏗️ Architecture & Engineering Principles
+## Tech Stack
 
-- **Single Source of Truth (SOT)**: All project, experience, education, and skill configurations are centralized in `src/config/` and localized via `src/locales/`.
-- **Separation of Concerns (SOC)**:
-  - `src/components/`: Reusable presentation primitives (`SpotlightCard`, `InteractiveBackground`, `BottomNavbar`, `Sidebar`, `ProjectDetailModal`, `Loading`).
-  - `src/sections/`: Isolated view stages (`OverviewSection`, `ProjectsSection`, `ExperienceSection`, `SkillsSection`, `EducationSection`, `ContactSection`).
-  - `src/hooks/`: Navigation and interaction logic (`useSectionNavigation`).
-- **DRY (Don't Repeat Yourself)**: Shared interaction hooks, uniform tokenized styling, and centralized type contracts.
+- React 19
+- TypeScript
+- Tailwind CSS
+- Motion
+- Vite
 
----
-
-## ⚡ High-Concurrency & Performance Architecture (1000+ Concurrent Users)
-
-1. **Static Edge Asset Delivery**:
-   - The entire production build (`dist/`) compiles into immutable static assets (`HTML`, `CSS`, `JS`, `Images`, `PDFs`).
-   - Deployed to edge CDN networks (e.g. Cloudflare Pages, Vercel Edge, GCP Cloud CDN).
-2. **Chunk Splitting & Tree-Shaking**:
-   - Vendor chunks (`react`, `i18n`, `icons`, `vendor`) are separated with long-term immutable caching (`Cache-Control: max-age=31536000, immutable`).
-3. **Canvas Performance Guard**:
-   - `InteractiveBackground.tsx` automatically pauses rendering when the browser tab is hidden or minimized (`document.hidden`), saving 100% CPU/GPU cycles.
-4. **Zero-Scroll Viewport**:
-   - Fixed 1-page canvas with smooth `motion/react` cross-fades between sections.
-   - Mouse wheel, keyboard arrow (`←`/`→`, `PageUp`/`PageDown`), and touch swipe navigation.
-
----
-
-## 🛠️ Tech Stack
-
-- **Framework**: React 19 + TypeScript
-- **Bundler & Build**: Vite + Rolldown
-- **Styling**: Tailwind CSS v4
-- **Motion**: Motion (Framer Motion v13)
-- **Icons**: Lucide React
-- **Localization**: i18next + react-i18next (English default + Indonesian)
-
----
-
-## 🚀 Development & Build
+## Getting Started
 
 ```bash
-# Install dependencies
+# install dependencies
 pnpm install
 
-# Start local dev server
-pnpm run dev
+# run development server
+pnpm dev
 
-# Compile optimized production bundle
-pnpm run build
+# build for production
+pnpm build
 
-# Preview production build locally
-pnpm run preview
+# preview production build
+pnpm preview
 ```
-
----
-
-*Muhamad Rivan Sahronie · Bandung, Indonesia*

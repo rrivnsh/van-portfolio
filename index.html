@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary Meta Tags & SEO -->
     <title>Muhamad Rivan Sahronie | Web Developer & Software Engineer Portfolio</title>
     <meta
       name="title"
@@ -24,7 +23,7 @@
     <meta name="theme-color" content="#080808" />
     <link rel="canonical" href="https://rivan.me/" />
 
-    <!-- Open Graph / Facebook / LinkedIn -->
+    <!-- open graph & twitter -->
     <meta property="og:type" content="profile" />
     <meta property="og:site_name" content="Muhamad Rivan Sahronie Portfolio" />
     <meta property="og:url" content="https://rivan.me/" />
@@ -46,7 +45,6 @@
     <meta property="profile:last_name" content="Sahronie" />
     <meta property="profile:username" content="rrivnsh" />
 
-    <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@rrivnsh" />
     <meta name="twitter:creator" content="@rrivnsh" />
@@ -62,11 +60,9 @@
     <meta name="twitter:image" content="https://rivan.me/og-image.png" />
     <meta name="twitter:image:alt" content="Muhamad Rivan Sahronie" />
 
-    <!-- Favicon & Touch Icons -->
+    <!-- icons & typography -->
     <link rel="icon" type="image/png" href="/ppvan.png" />
     <link rel="apple-touch-icon" href="/ppvan.png" />
-
-    <!-- Typography Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -74,17 +70,23 @@
       rel="stylesheet"
     />
 
-    <!-- Initial Render Style to Prevent White Flash -->
-    <style>
-      html, body {
-        background-color: #080808;
-        color: #ffffff;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <!-- theme init before hydration -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+          if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+          } else {
+            document.documentElement.classList.remove("dark");
+          }
+        } catch (e) {}
+      })();
+    </script>
 
-    <!-- Structured Data (Schema.org) for Google Knowledge Graph & Top Search Ranking -->
+    <!-- structured data (schema.org) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -165,7 +167,7 @@
   <body>
     <div id="root"></div>
 
-    <!-- Noscript Fallback for Crawlers and Accessibility -->
+    <!-- crawler fallback -->
     <noscript>
       <div style="max-width: 720px; margin: 40px auto; padding: 24px; font-family: sans-serif; color: #fff; background: #111; border-radius: 12px;">
         <h1 style="font-size: 28px; margin-bottom: 8px;">Muhamad Rivan Sahronie</h1>
@@ -185,7 +187,7 @@
 
     <script type="module" src="/src/main.tsx"></script>
 
-    <!-- Google Analytics -->
+    <!-- analytics -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-3QRG03P2JD"

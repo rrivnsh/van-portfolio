@@ -26,7 +26,7 @@ export const ExperienceSection = () => {
     setSelectedIndex((prev) => (prev < experienceData.length - 1 ? prev + 1 : 0));
   };
 
-  // Keyboard left/right arrow navigation
+  // keyboard arrow navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (document.body.classList.contains("modal-open")) return;
@@ -146,7 +146,6 @@ export const ExperienceSection = () => {
         </AnimatePresence>
       </SpotlightCard>
 
-      {/* Slider Progress Bar / Dots */}
       <div className="flex items-center justify-center gap-2 pt-1">
         {experienceData.map((_, idx) => (
           <button

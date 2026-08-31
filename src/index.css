@@ -6,7 +6,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Theme tokens */
+/* theme tokens */
 :root[data-theme="light"] {
   --color-bg: #fcfcfc;
   --color-surface: #ffffff;
@@ -71,10 +71,12 @@ body.modal-open {
   overflow: hidden;
 }
 
-/* Typography Scale */
-h1, h2, h3, h4 {
-  text-wrap: balance;
-  color: var(--color-fg);
+/* typography scale */
+@layer base {
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+    color: var(--color-fg);
+  }
 }
 
 .text-display {
@@ -116,7 +118,7 @@ h1, h2, h3, h4 {
   font-weight: 600;
 }
 
-/* Focus and scrollbars */
+/* focus and scrollbars */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -144,10 +146,7 @@ textarea:focus-visible {
   background: var(--color-muted);
 }
 
-/* ──────────────────────────────────────────────
-   Motion Accessibility
-   ────────────────────────────────────────────── */
-
+/* reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   *,
   ::before,

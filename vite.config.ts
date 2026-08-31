@@ -28,7 +28,6 @@ export default defineConfig({
       output: {
         manualChunks: (id) => {
           if (id.includes("node_modules")) {
-            // React
             if (
               id.includes("react") ||
               id.includes("react-dom") ||
@@ -36,15 +35,12 @@ export default defineConfig({
             ) {
               return "react";
             }
-            // i18n
             if (id.includes("i18next") || id.includes("react-i18next")) {
               return "i18n";
             }
-            // Icons
             if (id.includes("lucide-react")) {
               return "icons";
             }
-            // Other vendor packages
             return "vendor";
           }
         },
