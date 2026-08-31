@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import {
   OverviewSection,
   ProjectsSection,
@@ -16,6 +16,10 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
+  const handleLoadingComplete = useCallback(() => {
+    setIsLoading(false);
+  }, []);
+
   const {
     activeSection,
     handleNavigateSection,
@@ -25,10 +29,6 @@ function App() {
     nextSection,
     sections,
   } = useSectionNavigation();
-
-  if (isLoading) {
-    return <Loading onLoadingComplete={() => setIsLoading(false)} />;
-  }
 
   const renderActiveSection = () => {
     switch (activeSection) {
@@ -50,6 +50,12 @@ function App() {
 
   return (
     <div className="min-h-screen bg-(--color-bg) text-(--color-fg) flex flex-col relative selection:bg-(--color-fg) selection:text-(--color-bg)">
+      <AnimatePresence>
+        {isLoading && (
+          <Loading onLoadingComplete={handleLoadingComplete} />
+        )}
+      </AnimatePresence>
+
       <InteractiveBackground />
 
       <Sidebar
